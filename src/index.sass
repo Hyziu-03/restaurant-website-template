@@ -1,0 +1,36 @@
+$blue: rgb(25, 44, 108)
+$white: #f8f8f8
+$size: 16px
+$spacing: 8px
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: $size
+    color: $blue
+
+.container
+    display: flex
+    flex-direction: column
+
+.header
+    background: $white
+    border: $spacing / 4 solid $blue
+    display: flex
+    align-items: center
+
+.heading
+    font-family: Dosis, sans-serif
+    font-size: 1.5 * $size
+    font-weight: 800
+    line-height: 2 * $size  
+    text-align: center
+    text-transform: capitalize
+    padding: 3 * $spacing
+
+    &:hover
+        text-shadow: 0 $spacing / 2 $spacing / 2
+    // $ Popraw ten cień, dokończ stylizowanie nagłówka i przycisków!
