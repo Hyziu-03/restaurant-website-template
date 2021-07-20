@@ -1,4 +1,4 @@
-import Logo from '../pizza.png'
+import Pizza from '../pizza.png'
 
 const LandingPage = () => {
     return (
@@ -15,11 +15,11 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                    <button className="browse-our-menu">Browse our menu</button>
-                    <button className="see-customer-reviews">See customer reviews</button>
+                    <button className="browse-our-menu" tabIndex='0'>Browse our menu</button>
+                    <button className="see-customer-reviews" tabIndex='0'>See customer reviews</button>
                 </section>
             </section>
-            <img src={Logo} alt="Round and yummy pizza with tomatoes, cheese, olives and basil." className="logo" />
+            <img src={Pizza} alt="Round and yummy pizza with tomatoes, cheese, olives and basil." className="pizza" />
         </article>
     )
 }
