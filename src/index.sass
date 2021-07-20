@@ -11,16 +11,22 @@ $size: 18px
 $spacing: 8px
 
 @mixin heading
-    font-family: Dosis, sans-serif
-    font-size: 1.5 * $size
+    font-family: 'Dosis', sans-serif
+    font-size: 2 * $size
     font-weight: 800
-    line-height: 2 * $size  
+    line-height: 2.5 * $size  
     text-transform: capitalize
 
 @mixin body-text
-    font-family: Raleway
+    font-family: 'Raleway', sans-serif
     font-weight: 300
     line-height: 2 * $size
+    font-size: 1.25 * $size
+
+@mixin photo 
+    height: 325px
+    width: auto
+    pointer-events: none
 
 *
     padding: 0
@@ -37,6 +43,8 @@ html
 .container
     display: flex
     flex-direction: column
+
+// ? Header:
 
 .header
     background: $white
@@ -86,6 +94,8 @@ html
     &:active
         background: $black
 
+// ? Landing Page:
+
 .landing-page
     display: flex
     margin-top: 3 * $spacing
@@ -101,7 +111,7 @@ html
     
 .description
     @include body-text
-    max-width: 75%
+    max-width: 65%
 
 .landing-page-buttons
     display: flex
@@ -116,8 +126,18 @@ html
     padding: 2 * $spacing 4 * $spacing
     border: none
     font-size: 1.1 * $size
-    
+    text-transform: capitalize
+    transition: .25s all ease
+    border: $spacing / 8 solid $blue
+
     @include body-text
+
+    &:hover, &:focus-visible
+        background: $green
+        color: $black
+        box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
+        border-color: transparent
+        cursor: pointer
 
 .browse-our-menu
     background: $blue
@@ -129,8 +149,33 @@ html
     color: $blue
     margin-left: 2 * $spacing
 
-.logo
-    height: 300px
-    width: auto
+.pizza
+    @include photo
     position: relative
-    right: -100px
+    left: -10%
+
+.customer-reviews
+    background: $hover-green
+    margin: 4 * $spacing 0
+    display: flex
+    align-items: center
+    padding: 4 * $spacing
+
+.customer-photo
+    @include photo
+    border-radius: 50%
+    margin: 4 * $spacing 8 * $spacing 0 10%
+    padding-bottom: 3 * $spacing
+
+.feedback
+    max-width: 55%
+
+.customer-words
+    @include body-text
+
+.signature
+    position: relative
+    right: -70%
+    top: 2 * $spacing
+    font-family: 'Lovers Quarrel', cursive
+    font-size: 2.5 * $size

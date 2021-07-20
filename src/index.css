@@ -48,10 +48,10 @@ html {
   -ms-user-select: none;
   user-select: none;
   padding: 24px;
-  font-family: Dosis, sans-serif;
-  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 36px;
   font-weight: 800;
-  line-height: 36px;
+  line-height: 45px;
   text-transform: capitalize;
 }
 
@@ -122,18 +122,19 @@ html {
 
 .headline {
   padding: 24px 0;
-  font-family: Dosis, sans-serif;
-  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 36px;
   font-weight: 800;
-  line-height: 36px;
+  line-height: 45px;
   text-transform: capitalize;
 }
 
 .description {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   line-height: 36px;
-  max-width: 75%;
+  font-size: 22.5px;
+  max-width: 65%;
 }
 
 .landing-page-buttons {
@@ -156,9 +157,26 @@ html {
   padding: 16px 32px;
   border: none;
   font-size: 19.8px;
-  font-family: Raleway;
+  text-transform: capitalize;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+  border: 1px solid #192c6c;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   line-height: 36px;
+  font-size: 22.5px;
+}
+
+.browse-our-menu:hover,
+.browse-our-menu:focus-visible,
+.see-customer-reviews:hover,
+.see-customer-reviews:focus-visible {
+  background: #37e21c;
+  color: #303030;
+  -webkit-box-shadow: 4px 4px 4px 0 rgba(55, 226, 28, 0.25);
+  box-shadow: 4px 4px 4px 0 rgba(55, 226, 28, 0.25);
+  border-color: transparent;
+  cursor: pointer;
 }
 
 .browse-our-menu {
@@ -173,11 +191,52 @@ html {
   margin-left: 16px;
 }
 
-.logo {
-  height: 300px;
+.pizza {
+  height: 325px;
   width: auto;
+  pointer-events: none;
   position: relative;
-  right: -100px;
+  left: -10%;
+}
+
+.customer-reviews {
+  background: rgba(55, 226, 28, 0.25);
+  margin: 32px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.customer-photo {
+  height: 325px;
+  width: auto;
+  pointer-events: none;
+  border-radius: 50%;
+  margin: 32px 64px 0 10%;
+  padding-bottom: 24px;
+}
+
+.feedback {
+  max-width: 55%;
+}
+
+.customer-words {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 36px;
+  font-size: 22.5px;
+}
+
+.signature {
+  position: relative;
+  right: -70%;
+  top: 16px;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 45px;
 }
 
 /*# sourceMappingURL=index.css.map */
