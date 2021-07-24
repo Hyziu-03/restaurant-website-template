@@ -2,8 +2,8 @@ import KateSwift from '../kate-swift.jpg';
 
 const CustomerReviews = () => {
     return (
-        <article className='customer-reviews'>
-            <span className="arrow-left"></span>
+        <article className='customer-reviews' id="customer-reviews">
+            <i className="fas fa-chevron-circle-left" tabIndex="0"></i>
             <img src={KateSwift} alt="" className="customer-photo" />
             <section className='feedback'>
                 <p className="customer-words">
@@ -14,7 +14,7 @@ const CustomerReviews = () => {
                 </p>
                 <span className="signature">Kate Swift</span>
             </section>
-            <span className="arrow-right"></span>
+            <i className="fas fa-chevron-circle-right" tabIndex="0"></i>
         </article>  
     )
 }
