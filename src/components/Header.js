@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <header className='header' tabIndex="0">
-            <h1 className='heading' tabIndex="0">Your Restaurant Name</h1>
+            <a href="index.html" className="heading"><h1>Your Restaurant Name</h1></a>
             <section className="buttons">
                 <button className="theme-toggler" tabIndex="0">
                     <i className="fas fa-sun"></i>
