@@ -12,7 +12,6 @@ $spacing: 8px
 
 @mixin heading
     font-family: 'Dosis', sans-serif
-    font-size: 2 * $size
     font-weight: 800
     line-height: 2.5 * $size  
     text-transform: capitalize
@@ -28,6 +27,13 @@ $spacing: 8px
     width: auto
     pointer-events: none
 
+@mixin button
+    box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-blue
+    border-radius: 40px
+    border: $spacing / 8 solid $blue
+    text-transform: capitalize
+    transition: .25s all ease
+
 *
     padding: 0
     margin: 0
@@ -39,10 +45,26 @@ $spacing: 8px
 html
     font-size: $size
     color: $blue
+    scroll-behavior: smooth
 
 .container
     display: flex
     flex-direction: column
+
+// ? Links:
+
+.link
+    color: inherit
+
+    &:hover, &:focus-visible
+        text-underline-offset: $spacing / 4
+        font-weight: bold
+
+.button-link
+    color: inherit
+    text-decoration: none
+    padding: 2 * $spacing 4 * $spacing
+    display: block
 
 // ? Header:
 
@@ -59,6 +81,9 @@ html
     left: 10%
     user-select: none
     padding: 3 * $spacing
+    color: inherit
+    text-decoration: none
+    
     @include heading
     
     &:hover, &:focus-visible
@@ -107,8 +132,9 @@ html
 
 .headline
     padding: 3 * $spacing 0
+    font-size: 2 * $size
     @include heading
-    
+
 .description
     @include body-text
     max-width: 65%
@@ -120,25 +146,23 @@ html
     left: 10%
     padding: 3 * $spacing 0
 
-.browse-our-menu, .see-customer-reviews
-    box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-blue
-    border-radius: 40px
-    padding: 2 * $spacing 4 * $spacing
-    border: none
+.browse-our-menu, .see-customer-reviews, .contact-us
     font-size: 1.1 * $size
-    text-transform: capitalize
-    transition: .25s all ease
-    border: $spacing / 8 solid $blue
-
+    
+    @include button
     @include body-text
 
     &:hover, &:focus-visible
         background: $green
         color: $black
         box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
-        border-color: transparent
         cursor: pointer
+        border-color: transparent
 
+    &:active
+        background: $black
+        color: $white
+        
 .browse-our-menu
     background: $blue
     color: $white
@@ -153,6 +177,8 @@ html
     @include photo
     position: relative
     left: -10%
+
+// ? Customer Reviews: 
 
 .customer-reviews
     background: $hover-green
@@ -179,3 +205,40 @@ html
     top: 2 * $spacing
     font-family: 'Lovers Quarrel', cursive
     font-size: 2.5 * $size
+
+.fa-chevron-circle-left, .fa-chevron-circle-right
+    position: absolute
+    font-size: 2.5 * $size
+    transition: .25s all ease
+
+    &:hover, &:focus-visible
+        color: $green
+        cursor: pointer
+
+    &:active
+        color: $black
+
+.fa-chevron-circle-left
+    left: 8 * $spacing
+
+.fa-chevron-circle-right
+    right: 4 * $spacing
+
+// ? Footer:
+
+.footer
+    display: flex
+    align-items: center
+    background: $hover-blue
+    padding: 2 * $spacing
+    margin-bottom: 2 * $spacing 
+
+.contact-us
+    white-space: nowrap
+    margin: 0 6 * $spacing
+    padding: 2 * $spacing 4 * $spacing
+    font-size: $size
+
+.copyright
+    font-family: 'Raleway', sans-serif
+    line-height: 1.5 * $size

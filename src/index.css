@@ -12,6 +12,7 @@
 html {
   font-size: 18px;
   color: #192c6c;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -22,6 +23,23 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.link {
+  color: inherit;
+}
+
+.link:hover,
+.link:focus-visible {
+  text-underline-offset: 2px;
+  font-weight: bold;
+}
+
+.button-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 16px 32px;
+  display: block;
 }
 
 .header {
@@ -48,8 +66,9 @@ html {
   -ms-user-select: none;
   user-select: none;
   padding: 24px;
+  color: inherit;
+  text-decoration: none;
   font-family: 'Dosis', sans-serif;
-  font-size: 36px;
   font-weight: 800;
   line-height: 45px;
   text-transform: capitalize;
@@ -122,8 +141,8 @@ html {
 
 .headline {
   padding: 24px 0;
-  font-family: 'Dosis', sans-serif;
   font-size: 36px;
+  font-family: 'Dosis', sans-serif;
   font-weight: 800;
   line-height: 45px;
   text-transform: capitalize;
@@ -150,17 +169,16 @@ html {
 }
 
 .browse-our-menu,
-.see-customer-reviews {
+.see-customer-reviews,
+.contact-us {
+  font-size: 19.8px;
   -webkit-box-shadow: 4px 4px 4px 0 rgba(25, 44, 108, 0.5);
   box-shadow: 4px 4px 4px 0 rgba(25, 44, 108, 0.5);
   border-radius: 40px;
-  padding: 16px 32px;
-  border: none;
-  font-size: 19.8px;
+  border: 1px solid #192c6c;
   text-transform: capitalize;
   -webkit-transition: .25s all ease;
   transition: .25s all ease;
-  border: 1px solid #192c6c;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   line-height: 36px;
@@ -170,13 +188,22 @@ html {
 .browse-our-menu:hover,
 .browse-our-menu:focus-visible,
 .see-customer-reviews:hover,
-.see-customer-reviews:focus-visible {
+.see-customer-reviews:focus-visible,
+.contact-us:hover,
+.contact-us:focus-visible {
   background: #37e21c;
   color: #303030;
   -webkit-box-shadow: 4px 4px 4px 0 rgba(55, 226, 28, 0.25);
   box-shadow: 4px 4px 4px 0 rgba(55, 226, 28, 0.25);
-  border-color: transparent;
   cursor: pointer;
+  border-color: transparent;
+}
+
+.browse-our-menu:active,
+.see-customer-reviews:active,
+.contact-us:active {
+  background: #303030;
+  color: #f8f8f8;
 }
 
 .browse-our-menu {
@@ -237,6 +264,59 @@ html {
   top: 16px;
   font-family: 'Lovers Quarrel', cursive;
   font-size: 45px;
+}
+
+.fa-chevron-circle-left,
+.fa-chevron-circle-right {
+  position: absolute;
+  font-size: 45px;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.fa-chevron-circle-left:hover,
+.fa-chevron-circle-left:focus-visible,
+.fa-chevron-circle-right:hover,
+.fa-chevron-circle-right:focus-visible {
+  color: #37e21c;
+  cursor: pointer;
+}
+
+.fa-chevron-circle-left:active,
+.fa-chevron-circle-right:active {
+  color: #303030;
+}
+
+.fa-chevron-circle-left {
+  left: 64px;
+}
+
+.fa-chevron-circle-right {
+  right: 32px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(25, 44, 108, 0.5);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-us {
+  white-space: nowrap;
+  margin: 0 48px;
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.copyright {
+  font-family: 'Raleway', sans-serif;
+  line-height: 27px;
 }
 
 /*# sourceMappingURL=index.css.map */
