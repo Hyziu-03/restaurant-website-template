@@ -15,10 +15,10 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                    <button className="browse-our-menu">
-                        <a href="" className="button-link">Browse our menu</a>
+                    <button className="browse-our-menu" tabIndex="-1">
+                        <a href="menu.html" className="button-link">Browse our menu</a>
                     </button>
-                    <button className="see-customer-reviews">
+                    <button className="see-customer-reviews" tabIndex="-1">
                         <a href="#customer-reviews" className="button-link">See customer reviews</a>
                     </button>
                 </section>
