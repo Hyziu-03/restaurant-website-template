@@ -317,6 +317,94 @@ html {
 .copyright {
   font-family: 'Raleway', sans-serif;
   line-height: 27px;
+  margin-right: 108px;
+}
+
+@media (max-width: 1300px) {
+  .description {
+    font-size: 18px;
+  }
+
+  .button-link {
+    padding: 8px 32px;
+    font-size: 19.8px;
+  }
+
+  .pizza {
+    height: 275px;
+    margin-top: 32px;
+  }
+
+  .customer-words {
+    max-width: 90%;
+  }
+
+  .signature {
+    right: -50%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .landing-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .introduction {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .landing-page-buttons {
+    position: static;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .pizza {
+    position: static;
+    margin: 32px auto;
+  }
+
+  .customer-reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+
+  .customer-words {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .fa-chevron-circle-left {
+    position: relative;
+    inset: 320px 0 0 -40%;
+  }
+
+  .fa-chevron-circle-right {
+    position: relative;
+    inset: 0 0 0 40%;
+  }
+
+  .copyright {
+    font-size: 16.2px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

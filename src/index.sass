@@ -1,3 +1,5 @@
+// ? Colours:
+
 $blue: rgb(25, 44, 108)
 $hover-blue: rgba(25, 44, 108, 0.5)
 
@@ -7,8 +9,12 @@ $hover-green: rgba(55, 226, 28, 0.25)
 $white: #f8f8f8
 $black: #303030
 
+// ? Sizing Units:
+
 $size: 18px
 $spacing: 8px
+
+// ? Mixins:
 
 @mixin heading
     font-family: 'Dosis', sans-serif
@@ -33,6 +39,8 @@ $spacing: 8px
     border: $spacing / 8 solid $blue
     text-transform: capitalize
     transition: .25s all ease
+
+// ? Overall Selectors:
 
 *
     padding: 0
@@ -242,3 +250,62 @@ html
 .copyright
     font-family: 'Raleway', sans-serif
     line-height: 1.5 * $size
+    margin-right: 6 * $size
+
+// ? Responsiveness:
+
+@media(max-width: 1300px)
+    .description
+        font-size: $size 
+    
+    .button-link
+        padding: $spacing 4 * $spacing
+        font-size: 1.1 * $size
+
+    .pizza
+        height: 275px
+        margin-top: 4 * $spacing
+
+    .customer-words
+        max-width: 90%
+
+    .signature
+        right: -50%
+
+@media(max-width: 1050px)
+    .landing-page
+        flex-direction: column
+
+    .introduction
+        position: static
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: justify
+
+    .landing-page-buttons
+        position: static
+        justify-content: center
+
+    .pizza
+        position: static
+        margin: 4 * $spacing auto
+
+    .customer-reviews
+        flex-direction: column
+        padding-bottom: 6 * $spacing
+
+    .customer-words
+        max-width: 100%
+        text-align: justify
+
+    .fa-chevron-circle-left
+        position: relative 
+        inset: 40 * $spacing 0 0 -40%
+
+    .fa-chevron-circle-right
+        position: relative 
+        inset: 0 0 0 40%
+
+    .copyright
+        font-size: .9 * $size
