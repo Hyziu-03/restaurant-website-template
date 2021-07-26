@@ -19,5 +19,4 @@ function App() {
 export default App;
 
 // $ (1) Napraw błąd związany ze zdarzeniem focus w pliku components/LandingPage.js.
-// $ (2) Napraw błędy w responsywności w pliku index.sass.
-// $ (3) Zdefiniuj responsywnosć w pliku index.sass.
+// $ (2) Zdefiniuj responsywnosć w pliku index.sass.

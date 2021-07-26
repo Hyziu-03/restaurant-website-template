@@ -160,7 +160,7 @@ html
     @include button
     @include body-text
 
-    &:hover, &:focus-visible
+    &:hover
         background: $green
         color: $black
         box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
@@ -247,6 +247,13 @@ html
     padding: 2 * $spacing 4 * $spacing
     font-size: $size
 
+    &:focus-visible
+        background: $green
+        color: $black
+        box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
+        cursor: pointer
+        border-color: transparent
+
 .copyright
     font-family: 'Raleway', sans-serif
     line-height: 1.5 * $size
@@ -295,17 +302,12 @@ html
         flex-direction: column
         padding-bottom: 6 * $spacing
 
+    .feedback
+        margin: 0
+
     .customer-words
         max-width: 100%
         text-align: justify
-
-    .fa-chevron-circle-left
-        position: relative 
-        inset: 40 * $spacing 0 0 -40%
-
-    .fa-chevron-circle-right
-        position: relative 
-        inset: 0 0 0 40%
 
     .copyright
         font-size: .9 * $size
