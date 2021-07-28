@@ -18,5 +18,5 @@ function App() {
 
 export default App;
 
-// $ (1) Napraw błąd związany ze zdarzeniem focus w pliku components/LandingPage.js.
-// $ (2) Zdefiniuj responsywnosć w pliku index.sass.
+// $ (1) Dodaj mechanikę do przycisku w stopce.
+// $ (2) Dodaj trzy kafelki z feedbackiem.
