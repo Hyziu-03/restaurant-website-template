@@ -107,7 +107,7 @@ html
     position: relative
     right: 10%
 
-.theme-toggler, .navigation
+.theme-toggler
     border-radius: 50%
     background: $blue
     color: $white
@@ -227,7 +227,7 @@ html
         color: $black
 
 .fa-chevron-circle-left
-    left: 8 * $spacing
+    left: 4 * $spacing
 
 .fa-chevron-circle-right
     right: 4 * $spacing
@@ -258,6 +258,7 @@ html
     font-family: 'Raleway', sans-serif
     line-height: 1.5 * $size
     margin-right: 6 * $size
+    text-align: center
 
 // ? Responsiveness:
 
@@ -288,7 +289,9 @@ html
         display: flex
         flex-direction: column
         align-items: center
-        text-align: justify
+
+    .description
+        max-width: 85%
 
     .landing-page-buttons
         position: static
@@ -307,7 +310,44 @@ html
 
     .customer-words
         max-width: 100%
-        text-align: justify
 
     .copyright
         font-size: .9 * $size
+
+@media(max-width: 680px)
+    .theme-toggler
+        width: 6 * $spacing
+        height: 6 * $spacing
+        
+    .description, .customer-words
+        font-size: .9 * $size
+
+    .headline
+        font-size: 1.5 * $size
+        max-width: 80%
+        text-align: center
+
+    .landing-page-buttons
+        flex-direction: column
+
+    .browse-our-menu
+        margin: 0 0 3 * $spacing 0
+
+    .see-customer-reviews
+        margin: 0
+
+    .feedback
+        max-width: 90%
+
+    .customer-photo
+        margin: 0
+        height: 250px
+
+    .footer
+        flex-direction: column
+
+    .contact-us
+        margin: 2 * $spacing 3 * $spacing
+
+    .copyright
+        margin-right: 0
