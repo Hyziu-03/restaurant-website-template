@@ -82,6 +82,9 @@ html
     display: flex
     align-items: center
     justify-content: space-between
+    position: sticky
+    top: 0
+    z-index: 10
 
 .heading
     transition: .25s all ease
@@ -259,6 +262,31 @@ html
     line-height: 1.5 * $size
     margin-right: 6 * $size
     text-align: center
+
+#placeholder
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.layout-wrapper
+    border: $spacing / 4 solid $blue
+    background: $white
+    box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
+    display: flex
+
+.input-fields
+    display: flex
+    flex-direction: column
+    border: none
+
+.label
+    display: flex
+    flex-direction: column
+
+.roses-envelope
+    height: 100px
+    width: auto
 
 // ? Responsiveness:
 
