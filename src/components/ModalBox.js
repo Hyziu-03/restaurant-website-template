@@ -4,21 +4,20 @@ const ModalBox = () => {
     return (
         <div className="layout-wrapper">
             <section className="modal-box">
-                <fieldset className="input-fields">
+                <form className="input-fields">
                     <label htmlFor="name" className="label">
-                        Your name is: <input type="text" name="" id="name" className="name-input" />
+                        Your name is: <input type="text" name="name" id="name" className="name-input" autoComplete="name" required/>
                     </label>
                     <label htmlFor="email" className="label">
-                        Your email adress is: <input type="email" name="" id="email" className="email-input" />
+                        Your email adress is: <input type="email" name="email" id="email" className="email-input" autoComplete="email" required/>
                     </label>
                     <label htmlFor="thoughts" className="label">
-                        Your thoughts go here: <textarea name="" id="thoughts" cols="30" rows="10" className="thoughts-container"></textarea>
-                    </label>
-
-                    <button className="send-feedback">
-                        Send Your Feedback!
-                    </button>
-                </fieldset>
+                        Your thoughts go here: <textarea name="thoughts" id="thoughts" className="thoughts-container"></textarea>
+                    </label> 
+                </form>
+                <button className="send-feedback" type="submit">
+                    Send Your Feedback!
+                </button>
             </section>
             <img src={RosesEnvelope} alt="" className="roses-envelope" />
         </div>
