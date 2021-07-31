@@ -130,7 +130,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 24px;
+  margin: 48px 0;
   overflow: hidden;
 }
 
@@ -170,8 +170,8 @@ html {
 
 .browse-our-menu,
 .see-customer-reviews,
-.contact-us {
-  font-size: 19.8px;
+.contact-us,
+.send-feedback {
   -webkit-box-shadow: 4px 4px 4px 0 rgba(25, 44, 108, 0.5);
   box-shadow: 4px 4px 4px 0 rgba(25, 44, 108, 0.5);
   border-radius: 40px;
@@ -187,7 +187,8 @@ html {
 
 .browse-our-menu:hover,
 .see-customer-reviews:hover,
-.contact-us:hover {
+.contact-us:hover,
+.send-feedback:hover {
   background: #37e21c;
   color: #303030;
   -webkit-box-shadow: 4px 4px 4px 0 rgba(55, 226, 28, 0.25);
@@ -198,7 +199,8 @@ html {
 
 .browse-our-menu:active,
 .see-customer-reviews:active,
-.contact-us:active {
+.contact-us:active,
+.send-feedback:active {
   background: #303030;
   color: #f8f8f8;
 }
@@ -207,12 +209,14 @@ html {
   background: #192c6c;
   color: #f8f8f8;
   margin-right: 16px;
+  font-size: 19.8px;
 }
 
 .see-customer-reviews {
   background: #f8f8f8;
   color: #192c6c;
   margin-left: 16px;
+  font-size: 19.8px;
 }
 
 .pizza {
@@ -367,8 +371,54 @@ html {
 }
 
 .roses-envelope {
-  height: 100px;
+  height: 325px;
   width: auto;
+  pointer-events: none;
+  margin: 32px;
+  position: relative;
+  top: 16px;
+  -webkit-box-shadow: 8px 8px 4px 0 rgba(25, 44, 108, 0.5);
+  box-shadow: 8px 8px 4px 0 rgba(25, 44, 108, 0.5);
+  border: 2px solid #192c6c;
+}
+
+.label {
+  margin: 8px 16px 8px 24px;
+}
+
+.label:nth-of-type(1) {
+  margin-top: 24px;
+}
+
+.name-input,
+.email-input,
+.thoughts-container {
+  border: 2px solid #192c6c;
+  background: #f8f8f8;
+  color: #192c6c;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16.2px;
+  margin: 8px 0;
+  padding: 4px 8px;
+}
+
+.name-input,
+.email-input {
+  line-height: 2;
+}
+
+.thoughts-container {
+  line-height: 1.5;
+  height: 108px;
+  resize: none;
+}
+
+.send-feedback {
+  padding: 16px 32px;
+  margin: 8px 32px 24px 32px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background: #192c6c;
 }
 
 @media (max-width: 1300px) {

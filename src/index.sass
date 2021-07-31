@@ -40,6 +40,15 @@ $spacing: 8px
     text-transform: capitalize
     transition: .25s all ease
 
+@mixin input 
+    border: $spacing / 4 solid $blue
+    background: $white
+    color: $blue
+    font-family: 'Raleway', sans-serif
+    font-size: .9 * $size
+    margin: $spacing 0
+    padding: $spacing / 2 $spacing
+
 // ? Overall Selectors:
 
 *
@@ -134,7 +143,7 @@ html
 
 .landing-page
     display: flex
-    margin-top: 3 * $spacing
+    margin: 6 * $spacing 0
     overflow: hidden
 
 .introduction
@@ -157,9 +166,7 @@ html
     left: 10%
     padding: 3 * $spacing 0
 
-.browse-our-menu, .see-customer-reviews, .contact-us
-    font-size: 1.1 * $size
-    
+.browse-our-menu, .see-customer-reviews, .contact-us, .send-feedback    
     @include button
     @include body-text
 
@@ -178,11 +185,13 @@ html
     background: $blue
     color: $white
     margin-right: 2 * $spacing
+    font-size: 1.1 * $size
 
 .see-customer-reviews
     background: $white
     color: $blue
     margin-left: 2 * $spacing
+    font-size: 1.1 * $size
 
 .pizza
     @include photo
@@ -285,8 +294,36 @@ html
     flex-direction: column
 
 .roses-envelope
-    height: 100px
-    width: auto
+    @include photo
+    margin: 4 * $spacing
+    position: relative
+    top: 2 * $spacing
+    box-shadow: $spacing $spacing $spacing / 2 0 $hover-blue
+    border: $spacing / 4 solid $blue
+
+.label
+    margin: $spacing 2 * $spacing $spacing 3 * $spacing
+
+.label:nth-of-type(1)
+    margin-top: 3 * $spacing
+
+.name-input, .email-input, .thoughts-container
+    @include input
+
+.name-input, .email-input
+    line-height: 2
+
+.thoughts-container
+    line-height: 1.5
+    height: 6 * $size
+    resize: none
+
+.send-feedback
+    padding: 2 * $spacing 4 * $spacing
+    margin: $spacing 4 * $spacing 3 * $spacing 4 * $spacing
+    font-size: $size
+    color: $white
+    background: $blue
 
 // ? Responsiveness:
 
