@@ -48,6 +48,7 @@ $spacing: 8px
     font-size: .9 * $size
     margin: $spacing 0
     padding: $spacing / 2 $spacing
+    border-radius: $spacing / 4
 
 // ? Overall Selectors:
 
@@ -64,9 +65,17 @@ html
     color: $blue
     scroll-behavior: smooth
 
-.container
+#container
     display: flex
     flex-direction: column
+
+// ? Animation:
+
+@keyframes showUp
+    0%
+        transform: scale(0)
+    100%
+        transform: scale(1)
 
 // ? Links:
 
@@ -277,17 +286,28 @@ html
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    z-index: 30
 
-.layout-wrapper
+.form
+    display: flex
+
+.modal-box
     border: $spacing / 4 solid $blue
     background: $white
     box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
     display: flex
+    border-radius: $spacing / 4
+    flex-direction: column
+    animation-name: showUp
+    animation-duration: .25s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
 
 .input-fields
     display: flex
     flex-direction: column
     border: none
+    margin: 0 $spacing 0 2 * $spacing
 
 .label
     display: flex
@@ -296,10 +316,9 @@ html
 .roses-envelope
     @include photo
     margin: 4 * $spacing
-    position: relative
-    top: 2 * $spacing
     box-shadow: $spacing $spacing $spacing / 2 0 $hover-blue
     border: $spacing / 4 solid $blue
+    border-radius: $spacing / 4
 
 .label
     margin: $spacing 2 * $spacing $spacing 3 * $spacing
@@ -320,10 +339,11 @@ html
 
 .send-feedback
     padding: 2 * $spacing 4 * $spacing
-    margin: $spacing 4 * $spacing 3 * $spacing 4 * $spacing
+    margin: 3 * $spacing auto
     font-size: $size
     color: $white
     background: $blue
+    width: 50%
 
 // ? Responsiveness:
 

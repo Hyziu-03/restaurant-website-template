@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
+#container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +23,30 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .link {
@@ -337,9 +361,16 @@ html {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 30;
 }
 
-.layout-wrapper {
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-box {
   border: 2px solid #192c6c;
   background: #f8f8f8;
   -webkit-box-shadow: 0 8px 4px 0 rgba(25, 44, 108, 0.5);
@@ -347,6 +378,19 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-animation-name: showUp;
+  animation-name: showUp;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .input-fields {
@@ -358,6 +402,7 @@ html {
   -ms-flex-direction: column;
   flex-direction: column;
   border: none;
+  margin: 0 8px 0 16px;
 }
 
 .label {
@@ -375,11 +420,10 @@ html {
   width: auto;
   pointer-events: none;
   margin: 32px;
-  position: relative;
-  top: 16px;
   -webkit-box-shadow: 8px 8px 4px 0 rgba(25, 44, 108, 0.5);
   box-shadow: 8px 8px 4px 0 rgba(25, 44, 108, 0.5);
   border: 2px solid #192c6c;
+  border-radius: 2px;
 }
 
 .label {
@@ -400,6 +444,7 @@ html {
   font-size: 16.2px;
   margin: 8px 0;
   padding: 4px 8px;
+  border-radius: 2px;
 }
 
 .name-input,
@@ -415,10 +460,11 @@ html {
 
 .send-feedback {
   padding: 16px 32px;
-  margin: 8px 32px 24px 32px;
+  margin: 24px auto;
   font-size: 18px;
   color: #f8f8f8;
   background: #192c6c;
+  width: 50%;
 }
 
 @media (max-width: 1300px) {
