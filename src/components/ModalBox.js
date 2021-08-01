@@ -2,8 +2,8 @@ import RosesEnvelope from '../roses-envelope.jpg';
 
 const ModalBox = () => {
     return (
-        <div className="layout-wrapper">
-            <section className="modal-box">
+        <div className="modal-box">
+            <section className="form">
                 <form className="input-fields">
                     <label htmlFor="name" className="label">
                         Your name is: <input type="text" name="name" id="name" className="name-input" autoComplete="name" required/>
@@ -15,11 +15,11 @@ const ModalBox = () => {
                         Your thoughts go here: <textarea name="thoughts" id="thoughts" className="thoughts-container"></textarea>
                     </label> 
                 </form>
-                <button className="send-feedback" type="submit">
-                    Send Your Feedback!
-                </button>
+                <img src={RosesEnvelope} alt="" className="roses-envelope" />
             </section>
-            <img src={RosesEnvelope} alt="" className="roses-envelope" />
+            <button className="send-feedback" type="submit">
+                Send Your Feedback!
+            </button>
         </div>
     )
 }
