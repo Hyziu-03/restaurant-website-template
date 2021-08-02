@@ -3,10 +3,19 @@ import ModalBox from "./ModalBox";
 
 const showModalBox = () => {
     let placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = ReactDOMServer.renderToString(<ModalBox />);
+    placeholder.innerHTML = ReactDOMServer.renderToString( <ModalBox /> );
 
     let container = document.getElementById('container');
     container.style.filter = "blur(12px)";
+}
+
+// $ Update this function:
+const hideModalBox = (event) => {
+    let modalBox = document.getElementsByClassName('modal-box')[0];
+    let container = document.getElementById('container');
+
+    container.style.filter = "";
+    modalBox.style.animationDirection = 'reverse';
 }
 
 const Footer = () => {
