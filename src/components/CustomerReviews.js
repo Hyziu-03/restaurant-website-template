@@ -1,6 +1,6 @@
-let KateSwiftPhoto = '<img src="../kate-swift.jpg" alt="" className="customer-photo"/>';
-let MattSmithPhoto = '<img src="../matt-smith.jpg" alt="" className="customer-photo"/>';
-let JohnDoePhoto = '<img src="../john-doe.jpg" alt="" className="customer-photo"/>';
+// $ let KateSwiftPhoto = '<img src="../kate-swift.jpg" alt="" className="customer-photo"/>';
+// $ let MattSmithPhoto = '<img src="../matt-smith.jpg" alt="" className="customer-photo"/>';
+// $ let JohnDoePhoto = '<img src="../john-doe.jpg" alt="" className="customer-photo"/>';
 
 class Customer {
     constructor(name, review) {

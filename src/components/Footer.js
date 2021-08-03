@@ -9,8 +9,7 @@ const showModalBox = () => {
     container.style.filter = "blur(12px)";
 }
 
-// $ Update this function:
-const hideModalBox = (event) => {
+const hideModalBox = () => {
     let modalBox = document.getElementsByClassName('modal-box')[0];
     let container = document.getElementById('container');
 
@@ -21,7 +20,7 @@ const hideModalBox = (event) => {
 const Footer = () => {
     return (
         <footer className='footer'>
-            <button className="contact-us" tabIndex="0" onClick={showModalBox}>Contact Us</button>
+            <button className="contact-us" tabIndex="0" onClick={showModalBox} onBlur={hideModalBox}>Contact Us</button>
             <p className="copyright">
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href="https://www.linkedin.com/in/szymon-hyziak/" className='link' target="_blank" rel="noreferrer">here</a>. Thank you!
