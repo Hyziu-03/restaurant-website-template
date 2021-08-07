@@ -1,26 +1,7 @@
-import ReactDOMServer from 'react-dom/server';
-import ModalBox from "./ModalBox";
-
-const showModalBox = () => {
-    let placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = ReactDOMServer.renderToString( <ModalBox /> );
-
-    let container = document.getElementById('container');
-    container.style.filter = "blur(12px)";
-}
-
-const hideModalBox = () => {
-    let modalBox = document.getElementsByClassName('modal-box')[0];
-    let container = document.getElementById('container');
-
-    container.style.filter = "";
-    modalBox.style.animationDirection = 'reverse';
-}
-
 const Footer = () => {
     return (
         <footer className='footer'>
-            <button className="contact-us" tabIndex="0" onClick={showModalBox} onBlur={hideModalBox}>Contact Us</button>
+            <button className="contact-us" tabIndex="0">Contact Us</button>
             <p className="copyright">
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href="https://www.linkedin.com/in/szymon-hyziak/" className='link' target="_blank" rel="noreferrer">here</a>. Thank you!

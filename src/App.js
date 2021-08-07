@@ -20,6 +20,3 @@ function App() {
 }
 
 export default App;
-
-// $ (1) Dodaj mechanikę do przycisku w stopce.
-// $ (2) Dodaj trzy kafelki z feedbackiem.
