@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="content-wrapper">
       <div id="container">
         <Header />
         <main>
@@ -14,8 +13,6 @@ function App() {
         </main>
         <Footer />
       </div>
-      <article id="placeholder"></article>
-    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import Pizza from '../pizza.png'
+import Pizza from '../img/pizza.png'
 
 const LandingPage = () => {
     return (

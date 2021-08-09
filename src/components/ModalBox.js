@@ -1,4 +1,4 @@
-import RosesEnvelope from '../roses-envelope.jpg';
+import RosesEnvelope from '../img/roses-envelope.jpg';
 
 const ModalBox = () => {
     return (
