@@ -1,0 +1,426 @@
+// ? Colours:
+
+$blue: rgb(25, 44, 108)
+$hover-blue: rgba(25, 44, 108, 0.5)
+
+$green: rgb(55, 226, 28)
+$hover-green: rgba(55, 226, 28, 0.25)
+
+$white: #f8f8f8
+$black: #303030
+
+// ? Sizing Units:
+
+$size: 18px
+$spacing: 8px
+
+// ? Mixins:
+
+@mixin heading
+    font-family: 'Dosis', sans-serif
+    font-weight: 800
+    line-height: 2.5 * $size  
+    text-transform: capitalize
+
+@mixin body-text
+    font-family: 'Raleway', sans-serif
+    font-weight: 300
+    line-height: 2 * $size
+    font-size: 1.25 * $size
+
+@mixin photo 
+    height: 325px
+    width: auto
+    pointer-events: none
+
+@mixin button
+    box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-blue
+    border-radius: 40px
+    border: $spacing / 8 solid $blue
+    text-transform: capitalize
+    transition: .25s all ease
+
+@mixin input 
+    border: $spacing / 4 solid $blue
+    background: $white
+    color: $blue
+    font-family: 'Raleway', sans-serif
+    font-size: .9 * $size
+    margin: $spacing 0
+    padding: $spacing / 2 $spacing
+    border-radius: $spacing / 4
+
+// ? Overall Selectors:
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+    &:focus-visible
+        outline: none
+
+html
+    font-size: $size
+    color: $blue
+    scroll-behavior: smooth
+
+#container
+    display: flex
+    flex-direction: column
+
+// ? Links:
+
+.link
+    color: inherit
+
+    &:hover, &:focus-visible
+        text-underline-offset: $spacing / 4
+        font-weight: bold
+
+.button-link
+    color: inherit
+    text-decoration: none
+    padding: 2 * $spacing 4 * $spacing
+    display: block
+
+// ? Header:
+
+.header
+    background: $white
+    border: $spacing / 4 solid $blue
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: sticky
+    top: 0
+    z-index: 10
+
+.heading
+    transition: .25s all ease
+    position: relative
+    left: 10%
+    user-select: none
+    padding: 3 * $spacing
+    color: inherit
+    text-decoration: none
+    
+    @include heading
+    
+    &:hover, &:focus-visible
+        text-shadow: 0 $spacing / 2 $spacing / 2 $hover-blue
+        cursor: pointer
+
+    &:active
+        color: $black
+
+.buttons 
+    display: flex
+    align-items: center
+    position: relative
+    right: 10%
+
+.theme-toggler
+    border-radius: 50%
+    background: $blue
+    color: $white
+    width: 3 * $size
+    height: 3 * $size
+    margin: $spacing
+    font-size: 1.25 * $size
+    border: none
+    box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 $hover-blue
+    transition: .25s all ease
+
+    &:hover, &:focus-visible
+        background: $green
+        box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 $hover-green
+        cursor: pointer
+
+    &:active
+        background: $black
+
+// ? Landing Page:
+
+.landing-page
+    display: flex
+    margin: 6 * $spacing 0
+    overflow: hidden
+
+.introduction
+    position: relative
+    left: 10%
+
+.headline
+    padding: 3 * $spacing 0
+    font-size: 2 * $size
+    @include heading
+
+.description
+    @include body-text
+    max-width: 65%
+
+.landing-page-buttons
+    display: flex
+    align-items: center
+    position: relative
+    left: 10%
+    padding: 3 * $spacing 0
+
+.browse-our-menu, .see-customer-reviews, .contact-us, .send-feedback    
+    @include button
+    @include body-text
+
+    &:hover
+        background: $green
+        color: $black
+        box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
+        cursor: pointer
+        border-color: transparent
+
+    &:active
+        background: $black
+        color: $white
+        
+.browse-our-menu
+    background: $blue
+    color: $white
+    margin-right: 2 * $spacing
+    font-size: 1.1 * $size
+
+.see-customer-reviews
+    background: $white
+    color: $blue
+    margin-left: 2 * $spacing
+    font-size: 1.1 * $size
+
+.pizza
+    @include photo
+    position: relative
+    left: -10%
+
+// ? Customer Reviews: 
+
+.customer-reviews
+    background: $hover-green
+    margin: 4 * $spacing 0
+    display: flex
+    align-items: center
+    padding: 4 * $spacing
+
+.customer-photo
+    @include photo
+    border-radius: 50%
+    margin: 4 * $spacing 8 * $spacing 0 10%
+    padding-bottom: 3 * $spacing
+
+.feedback
+    max-width: 55%
+
+.customer-words
+    @include body-text
+
+.signature
+    position: relative
+    right: -70%
+    top: 2 * $spacing
+    font-family: 'Lovers Quarrel', cursive
+    font-size: 2.5 * $size
+
+.fa-chevron-circle-left, .fa-chevron-circle-right
+    position: absolute
+    font-size: 2.5 * $size
+    transition: .25s all ease
+
+    &:hover, &:focus-visible
+        color: $green
+        cursor: pointer
+
+    &:active
+        color: $black
+
+.fa-chevron-circle-left
+    left: 4 * $spacing
+
+.fa-chevron-circle-right
+    right: 4 * $spacing
+
+// ? Footer:
+
+.footer
+    display: flex
+    align-items: center
+    background: $hover-blue
+    padding: 2 * $spacing
+    margin-bottom: 2 * $spacing 
+
+.contact-us
+    white-space: nowrap
+    margin: 0 6 * $spacing
+    padding: 2 * $spacing 4 * $spacing
+    font-size: $size
+
+    &:focus-visible
+        background: $green
+        color: $black
+        box-shadow: $spacing / 2 $spacing / 2 $spacing / 2 0 $hover-green
+        cursor: pointer
+        border-color: transparent
+
+.copyright
+    font-family: 'Raleway', sans-serif
+    line-height: 1.5 * $size
+    margin-right: 6 * $size
+    text-align: center
+
+#placeholder
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 30
+
+.form
+    display: flex
+    padding: 2 * $spacing 2 * $spacing 0 2 * $spacing
+
+.modal-box
+    border: $spacing / 4 solid $blue
+    background: $white
+    box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
+    border-radius: $spacing / 4
+    flex-direction: column
+
+.input-fields
+    display: flex
+    flex-direction: column
+    border: none
+    margin: 0 $spacing 0 2 * $spacing
+
+.label
+    display: flex
+    flex-direction: column
+
+.roses-envelope
+    @include photo
+    margin: 4 * $spacing
+    box-shadow: $spacing $spacing $spacing / 2 0 $hover-blue
+    border: $spacing / 4 solid $blue
+    border-radius: $spacing / 4
+
+.label
+    margin: $spacing 2 * $spacing $spacing 3 * $spacing
+
+.label:nth-of-type(1)
+    margin-top: 3 * $spacing
+
+.name-input, .email-input, .thoughts-container
+    @include input
+
+.name-input, .email-input
+    line-height: 2
+
+.thoughts-container
+    line-height: 1.5
+    height: 6 * $size
+    resize: none
+
+.send-feedback
+    padding: 2 * $spacing 4 * $spacing
+    margin: 3 * $spacing auto
+    font-size: $size
+    color: $white
+    background: $blue
+    width: 50%
+
+// ? Responsiveness:
+
+@media(max-width: 1300px)
+    .description
+        font-size: $size 
+    
+    .button-link
+        padding: $spacing 4 * $spacing
+        font-size: 1.1 * $size
+
+    .pizza
+        height: 275px
+        margin-top: 4 * $spacing
+
+    .customer-words
+        max-width: 90%
+
+    .signature
+        right: -50%
+
+@media(max-width: 1050px)
+    .landing-page
+        flex-direction: column
+
+    .introduction
+        position: static
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .description
+        max-width: 85%
+
+    .landing-page-buttons
+        position: static
+        justify-content: center
+
+    .pizza
+        position: static
+        margin: 4 * $spacing auto
+
+    .customer-reviews
+        flex-direction: column
+        padding-bottom: 6 * $spacing
+
+    .feedback
+        margin: 0
+
+    .customer-words
+        max-width: 100%
+
+    .copyright
+        font-size: .9 * $size
+
+@media(max-width: 680px)
+    .theme-toggler
+        width: 6 * $spacing
+        height: 6 * $spacing
+        
+    .description, .customer-words
+        font-size: .9 * $size
+
+    .headline
+        font-size: 1.5 * $size
+        max-width: 80%
+        text-align: center
+
+    .landing-page-buttons
+        flex-direction: column
+
+    .browse-our-menu
+        margin: 0 0 3 * $spacing 0
+
+    .see-customer-reviews
+        margin: 0
+
+    .feedback
+        max-width: 90%
+
+    .customer-photo
+        margin: 0
+        height: 250px
+
+    .footer
+        flex-direction: column
+
+    .contact-us
+        margin: 2 * $spacing 3 * $spacing
+
+    .copyright
+        margin-right: 0
