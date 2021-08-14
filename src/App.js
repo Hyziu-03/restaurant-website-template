@@ -6,20 +6,23 @@ import Footer from './components/Footer';
 import LightTheme from './components/themes/LightTheme';
 import DarkTheme from './components/themes/DarkTheme';
 
-let theme = 'light';
 let container = document.getElementById('container');
 
-const detectTheme = (theme) => {
-  if(theme !== 'dark') {
-    container.innerHTML += ReactDOMServer.renderToString(<LightTheme />);
-  } else {
-    container.innerHTML += ReactDOMServer.renderToString(<DarkTheme />);
+const setTheme = () => {
+  try {
+    if (localStorage.getItem('theme') === null) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.getItem('theme') === 'light' ? container.innerHTML += ReactDOMServer.renderToString(<DarkTheme />) : container.innerHTML += ReactDOMServer.renderToString( <LightTheme /> );
+    }
+  } catch (exception) {
+    throw new Error (exception);
   }
 }
 
 function App() {
   return (
-      <div id="container" onLoad={detectTheme}>
+      <div id="container" onLoad={setTheme}>
         <Header />
         <main>
           <LandingPage />
