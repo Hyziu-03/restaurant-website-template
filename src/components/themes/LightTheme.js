@@ -1,7 +1,7 @@
 import '../../css/index.css';
 
 const LightTheme = () => {
-    return 0;
+    return '';
 }
 
 export default LightTheme;

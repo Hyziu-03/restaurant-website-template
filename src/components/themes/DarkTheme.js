@@ -1,7 +1,7 @@
 import '../../css/dark-theme.css';
 
 const DarkTheme = () => { 
-    return 0; 
+    return ''; 
 } 
 
 export default DarkTheme;
