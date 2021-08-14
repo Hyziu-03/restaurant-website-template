@@ -6,14 +6,14 @@ import Footer from './components/Footer';
 import LightTheme from './components/themes/LightTheme';
 import DarkTheme from './components/themes/DarkTheme';
 
-let theme = 'dark';
-let placeholder = document.getElementById('theme-container');
+let theme = 'light';
+let container = document.getElementById('container');
 
 const detectTheme = (theme) => {
   if(theme !== 'dark') {
-    placeholder.innerHTML = ReactDOMServer.renderToString(<LightTheme />);
+    container.innerHTML += ReactDOMServer.renderToString(<LightTheme />);
   } else {
-    placeholder.innerHTML = ReactDOMServer.renderToString(<DarkTheme />);
+    container.innerHTML += ReactDOMServer.renderToString(<DarkTheme />);
   }
 }
 
