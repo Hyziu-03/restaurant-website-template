@@ -1,2 +1,76 @@
-body
-    visibility: visible
+// ? Colours:
+
+$green: rgb(55, 226, 28)
+$blue: rgb(25, 44, 108)
+$hover-blue: rgba(25, 44, 108, 0.75)
+
+$white: #f8f8f8
+$black: #303030
+
+// ? Sizing Units:
+
+$spacing: 8px
+
+// ? Overall Selectors:
+
+html 
+    background: $black
+
+// ? Header:
+
+header
+    background: $black !important
+    border-color: $white !important
+
+.heading
+    color: $white 
+
+    &:hover, &:focus-visible
+        text-shadow: 0 $spacing / 2 $spacing / 2 $white 
+
+    &:active
+        color: $green
+
+.theme-toggler
+    background: $white
+    color: $black
+
+    &:hover
+        background: $green
+
+    &:active
+        background: $blue
+
+// ? Landing Page:
+
+.landing-page 
+    color: white
+
+.browse-our-menu, .see-customer-reviews
+    &:active
+        background: $blue
+
+.browse-our-menu
+    background: $white
+    color: $black
+
+.see-customer-reviews
+    background: $black
+    color: $white
+    box-shadow: none
+    border-radius: 40px
+    border: $spacing / 8 solid $white
+
+// ? Customer Reviews & Footer:
+
+.customer-reviews, .footer
+    color: $white
+    background: $blue
+
+.contact-us
+    background: $black
+    color: $white
+    border-color: $white
+
+    &:active
+        background: $blue

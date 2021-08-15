@@ -1,5 +1,75 @@
-body {
-  visibility: visible;
+html {
+  background: #303030;
+}
+
+header {
+  background: #303030 !important;
+  border-color: #f8f8f8 !important;
+}
+
+.heading {
+  color: #f8f8f8;
+}
+
+.heading:hover,
+.heading:focus-visible {
+  text-shadow: 0 4px 4px #f8f8f8;
+}
+
+.heading:active {
+  color: #37e21c;
+}
+
+.theme-toggler {
+  background: #f8f8f8;
+  color: #303030;
+}
+
+.theme-toggler:hover {
+  background: #37e21c;
+}
+
+.theme-toggler:active {
+  background: #192c6c;
+}
+
+.landing-page {
+  color: white;
+}
+
+.browse-our-menu:active,
+.see-customer-reviews:active {
+  background: #192c6c;
+}
+
+.browse-our-menu {
+  background: #f8f8f8;
+  color: #303030;
+}
+
+.see-customer-reviews {
+  background: #303030;
+  color: #f8f8f8;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 40px;
+  border: 1px solid #f8f8f8;
+}
+
+.customer-reviews,
+.footer {
+  color: #f8f8f8;
+  background: #192c6c;
+}
+
+.contact-us {
+  background: #303030;
+  color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+
+.contact-us:active {
+  background: #192c6c;
 }
 
 /*# sourceMappingURL=dark-theme.css.map */
