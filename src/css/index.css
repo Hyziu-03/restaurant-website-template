@@ -13,6 +13,7 @@ html {
   font-size: 18px;
   color: #192c6c;
   scroll-behavior: smooth;
+  background: #f8f8f8;
 }
 
 #container {
