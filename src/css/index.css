@@ -528,6 +528,10 @@ html {
     font-size: 16.2px;
   }
 
+  .description {
+    text-align: center;
+  }
+
   .headline {
     font-size: 27px;
     max-width: 80%;
