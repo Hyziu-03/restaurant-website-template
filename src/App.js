@@ -20,7 +20,19 @@ const setTheme = () => {
   }
 }
 
+const preloadImage = (url) => {
+  try {
+    let image = new Image();
+    image.src = url;
+  } catch (exception) {
+    throw new Error (exception);
+  }
+}
+
 function App() {
+  preloadImage('../src/img/kate-swift.jpg');
+  preloadImage('../src/img/matt-smith.jpg');
+
   return (
       <div id="container" onLoad={setTheme}>
         <Header />
