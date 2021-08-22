@@ -274,66 +274,6 @@ html
     margin-right: 6 * $size
     text-align: center
 
-#placeholder
-    position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    z-index: 30
-
-.form
-    display: flex
-    padding: 2 * $spacing 2 * $spacing 0 2 * $spacing
-
-.modal-box
-    border: $spacing / 4 solid $blue
-    background: $white
-    box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
-    border-radius: $spacing / 4
-    flex-direction: column
-
-.input-fields
-    display: flex
-    flex-direction: column
-    border: none
-    margin: 0 $spacing 0 2 * $spacing
-
-.label
-    display: flex
-    flex-direction: column
-
-.roses-envelope
-    @include photo
-    margin: 4 * $spacing
-    box-shadow: $spacing $spacing $spacing / 2 0 $hover-blue
-    border: $spacing / 4 solid $blue
-    border-radius: $spacing / 4
-
-.label
-    margin: $spacing 2 * $spacing $spacing 3 * $spacing
-
-.label:nth-of-type(1)
-    margin-top: 3 * $spacing
-
-.name-input, .email-input, .thoughts-container
-    @include input
-
-.name-input, .email-input
-    line-height: 2
-
-.thoughts-container
-    line-height: 1.5
-    height: 6 * $size
-    resize: none
-
-.send-feedback
-    padding: 2 * $spacing 4 * $spacing
-    margin: 3 * $spacing auto
-    font-size: $size
-    color: $white
-    background: $blue
-    width: 50%
-
 // ? Responsiveness:
 
 @media(max-width: 1300px)
