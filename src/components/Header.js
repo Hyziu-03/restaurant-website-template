@@ -16,7 +16,7 @@ const changeTheme = () => {
 const Header = () => {
     return (
         <header className='header' tabIndex="0">
-            <a href="index.html" className="heading"><h1>Your Name</h1></a>
+            <span className="heading"><h1>Your Name</h1></span>
             <section className="buttons">
                 <button className="theme-toggler" tabIndex="0" onClick={changeTheme}>
                     <i className="fas fa-sun"></i>

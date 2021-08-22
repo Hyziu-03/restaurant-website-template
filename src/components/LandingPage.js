@@ -1,5 +1,3 @@
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Menu from "./Menu";
 import Pizza from '../img/pizza.png'
 
 const LandingPage = () => {
@@ -17,17 +15,10 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                    <Router>
                         <button className="browse-our-menu focusable-button" tabIndex="-1">
-                            <Link to="/menu" className="button-link">Browse our menu</Link>
+                            <span className="button-link">Browse our menu</span>
                         </button>
 
-                        <Switch>
-                            <Route path="/menu">
-                                <Menu />
-                            </Route>
-                        </Switch>
-                    </Router>
                     <button className="see-customer-reviews focusable-button" tabIndex="-1">
                         <a href="#customer-reviews" className="button-link">See customer reviews</a>
                     </button>
@@ -39,5 +30,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage;
-
-// $ This may help: https://angwalt12.medium.com/full-screen-mode-on-react-47a6148ca53b
