@@ -73,7 +73,7 @@ html {
   padding: 24px;
   color: inherit;
   text-decoration: none;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis', 'Helvetica', sans-serif;
   font-weight: 800;
   line-height: 45px;
   text-transform: capitalize;
@@ -143,14 +143,14 @@ html {
 .headline {
   padding: 24px 0;
   font-size: 36px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis', 'Helvetica', sans-serif;
   font-weight: 800;
   line-height: 45px;
   text-transform: capitalize;
 }
 
 .description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
   font-weight: 300;
   line-height: 36px;
   font-size: 22.5px;
@@ -180,7 +180,7 @@ html {
   text-transform: capitalize;
   -webkit-transition: .25s all ease;
   transition: .25s all ease;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
   font-weight: 300;
   line-height: 36px;
   font-size: 22.5px;
@@ -254,7 +254,7 @@ html {
 }
 
 .customer-words {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
   font-weight: 300;
   line-height: 36px;
   font-size: 22.5px;
@@ -264,7 +264,7 @@ html {
   position: relative;
   right: -70%;
   top: 16px;
-  font-family: 'Lovers Quarrel', cursive;
+  font-family: 'Lovers Quarrel', 'Helvetica', cursive;
   font-size: 45px;
 }
 
@@ -326,10 +326,65 @@ html {
 }
 
 .copyright {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
   line-height: 27px;
   margin-right: 108px;
   text-align: center;
+}
+
+.menu {
+  min-width: 50vw;
+  background: #f8f8f8;
+  border: 2px solid #192c6c;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  -webkit-box-shadow: 0 8px 4px 0 rgba(25, 44, 108, 0.5);
+  box-shadow: 0 8px 4px 0 rgba(25, 44, 108, 0.5);
+  z-index: 20;
+}
+
+.dish-category {
+  font-family: 'Dosis', 'Helvetica', sans-serif;
+  font-weight: 800;
+  line-height: 45px;
+  text-transform: capitalize;
+  padding-bottom: 24px;
+  text-align: center;
+  font-size: 27px;
+}
+
+.close-modalbox {
+  position: absolute;
+  top: 16px;
+  right: 48px;
+  font-size: 49.5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Dosis', 'Helvetica', sans-serif;
+}
+
+.dish-list {
+  list-style-type: none;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-weight: 300;
+  line-height: 36px;
+  font-size: 22.5px;
+  margin-left: 15%;
+}
+
+.dish {
+  margin: 16px 0;
+}
+
+.price {
+  position: absolute;
+  right: 20%;
 }
 
 @media (max-width: 1300px) {

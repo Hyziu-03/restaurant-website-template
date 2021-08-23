@@ -17,13 +17,13 @@ $spacing: 8px
 // ? Mixins:
 
 @mixin heading
-    font-family: 'Dosis', sans-serif
+    font-family: 'Dosis', 'Helvetica', sans-serif
     font-weight: 800
     line-height: 2.5 * $size  
     text-transform: capitalize
 
 @mixin body-text
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', 'Helvetica', sans-serif
     font-weight: 300
     line-height: 2 * $size
     font-size: 1.25 * $size
@@ -44,11 +44,23 @@ $spacing: 8px
     border: $spacing / 4 solid $blue
     background: $white
     color: $blue
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', 'Helvetica', sans-serif
     font-size: .9 * $size
     margin: $spacing 0
     padding: $spacing / 2 $spacing
     border-radius: $spacing / 4
+
+@mixin center
+    min-width: 50vw
+    background: $white
+    border: $spacing / 4 solid $blue
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    padding: 4 * $spacing
+    box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
+    z-index: 20
 
 // ? Overall Selectors:
 
@@ -225,7 +237,7 @@ html
     position: relative
     right: -70%
     top: 2 * $spacing
-    font-family: 'Lovers Quarrel', cursive
+    font-family: 'Lovers Quarrel', 'Helvetica', cursive
     font-size: 2.5 * $size
 
 .fa-chevron-circle-left, .fa-chevron-circle-right
@@ -269,10 +281,41 @@ html
         border-color: transparent
 
 .copyright
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', 'Helvetica', sans-serif
     line-height: 1.5 * $size
     margin-right: 6 * $size
     text-align: center
+
+// ? Menu:
+
+.menu
+    @include center
+
+.dish-category
+    @include heading
+    padding-bottom: 3 * $spacing
+    text-align: center
+    font-size: 1.5 * $size
+
+.close-modalbox
+    position: absolute
+    top: 2 * $spacing
+    right: 6 * $spacing
+    font-size: 2.75 * $size
+    user-select: none
+    font-family: 'Dosis', 'Helvetica', sans-serif
+
+.dish-list
+    list-style-type: none
+    @include body-text
+    margin-left: 15%
+    
+.dish
+    margin: 2 * $spacing 0
+
+.price
+    position: absolute
+    right: 20%
 
 // ? Responsiveness:
 
