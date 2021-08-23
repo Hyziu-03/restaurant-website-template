@@ -1,4 +1,10 @@
+import ReactDOMServer from 'react-dom/server';
 import Pizza from '../img/pizza.png'
+import Menu from './Menu';
+
+const openMenu = () => {
+    document.body.innerHTML += ReactDOMServer.renderToString(<Menu />);
+}
 
 const LandingPage = () => {
     return (
@@ -15,7 +21,7 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" tabIndex="-1">
+                        <button className="browse-our-menu focusable-button" tabIndex="-1" onClick={openMenu}>
                             <span className="button-link">Browse our menu</span>
                         </button>
 
