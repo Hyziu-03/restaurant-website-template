@@ -2,9 +2,15 @@ import ReactDOMServer from 'react-dom/server';
 import Pizza from '../img/pizza.png'
 import Menu from './Menu';
 
-const openMenu = () => {
-    document.body.innerHTML += ReactDOMServer.renderToString(<Menu />);
-}
+    window.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('browse-our-menu')) {
+           document.getElementById('placeholder').innerHTML = ReactDOMServer.renderToString( <Menu /> );
+        }
+        else if (e.target !== document.getElementById('placeholder')) {
+            document.getElementById('placeholder').innerHTML = '';
+        }
+    });
+
 
 const LandingPage = () => {
     return (
@@ -21,8 +27,8 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" tabIndex="-1" onClick={openMenu}>
-                            <span className="button-link">Browse our menu</span>
+                        <button className="browse-our-menu focusable-button" tabIndex="-1">
+                            <span className="button-link" id='browse-our-menu'>Browse our menu</span>
                         </button>
 
                     <button className="see-customer-reviews focusable-button" tabIndex="-1">

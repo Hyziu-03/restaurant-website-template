@@ -34,13 +34,16 @@ function App() {
   preloadImage('../src/img/matt-smith.jpg');
 
   return (
-      <div id="container" onLoad={setTheme}>
-        <Header />
-        <main>
-          <LandingPage />
-          <CustomerReviews />
-        </main>
-        <Footer />
+      <div className="wrapper">
+        <div id="container" onLoad={setTheme}>
+          <Header />
+          <main>
+            <LandingPage />
+            <CustomerReviews />
+          </main>
+          <Footer />
+        </div>
+        <div id="placeholder"></div>
       </div>
   );
 }
