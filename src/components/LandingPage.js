@@ -1,20 +1,39 @@
-import ReactDOMServer from 'react-dom/server';
 import Pizza from '../img/pizza.png'
-import Menu from './Menu';
 
+const hideModal = () => document.getElementById('placeholder').style.display = 'none';
+const showModal = () => document.getElementById('placeholder').style.display = 'block';
+
+const detectPlace = () => {
     window.addEventListener('click', (e) => {
-        if (e.target === document.getElementById('browse-our-menu')) {
-           document.getElementById('placeholder').innerHTML = ReactDOMServer.renderToString( <Menu /> );
+        if (e.target === document.getElementsByClassName('fa-times')[0]) {
+            hideModal();
         }
-        else if (e.target !== document.getElementById('placeholder')) {
-            document.getElementById('placeholder').innerHTML = '';
-        }
-    });
 
+        let childrenNodes = [
+            document.getElementsByClassName('menu')[0],
+            document.getElementsByClassName('dish-category')[0],
+            document.getElementsByClassName('dish-list')[0],
+            document.getElementsByClassName('dish')[0],
+            document.getElementsByClassName('dish')[1],
+            document.getElementsByClassName('dish')[2],
+            document.getElementsByClassName('dish')[3],
+            document.getElementsByClassName('dish')[4],
+            document.getElementsByClassName('price')[0],
+            document.getElementsByClassName('price')[1],
+            document.getElementsByClassName('price')[2],
+            document.getElementsByClassName('price')[3],
+            document.getElementsByClassName('price')[4]
+        ];
+
+        childrenNodes.some((node) => e.target === node) ? console.log('Clicked inside!') : console.log('Clicked outside!');
+    });
+}
 
 const LandingPage = () => {
+    detectPlace();
+
     return (
-        <article className="landing-page">
+        <article className="landing-page" onLoad={hideModal}>
             <section className="textual-section">
                 <section className="introduction">
                     <h2 className="headline">Headline that captures attention!</h2>
@@ -27,7 +46,7 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" tabIndex="-1">
+                        <button className="browse-our-menu focusable-button" tabIndex="-1" onClick={showModal}>
                             <span className="button-link" id='browse-our-menu'>Browse our menu</span>
                         </button>
 
