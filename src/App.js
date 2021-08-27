@@ -2,6 +2,7 @@ import Header from './components/Header';
 import LandingPage  from './components/LandingPage';
 import CustomerReviews from './components/CustomerReviews';
 import Footer from './components/Footer';
+import Menu from './components/Menu';
 
 const loadStylesheet = () => {
   let theme = localStorage.getItem('theme');
@@ -43,7 +44,7 @@ function App() {
           </main>
           <Footer />
         </div>
-        <div id="placeholder"></div>
+        <div id="placeholder"><Menu /></div>
       </div>
   );
 }
