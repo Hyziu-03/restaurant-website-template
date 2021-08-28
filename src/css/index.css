@@ -347,6 +347,11 @@ html {
   z-index: 20;
 }
 
+#menu-arrow-right,
+#menu-arrow-left {
+  top: 45%;
+}
+
 .dish-category {
   font-family: 'Dosis', 'Helvetica', sans-serif;
   font-weight: 800;
