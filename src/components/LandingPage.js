@@ -1,36 +1,35 @@
 import Pizza from '../img/pizza.png'
 
-const hideModal = () => document.getElementById('placeholder').style.display = 'none';
-const showModal = () => document.getElementById('placeholder').style.display = 'block';
+let childrenNodes = [document.getElementsByClassName('menu')[0], document.getElementsByClassName('dish-category')[0], document.getElementsByClassName('dish-list')[0], document.getElementsByClassName('dish')[0], document.getElementsByClassName('dish')[1], document.getElementsByClassName('dish')[2], document.getElementsByClassName('dish')[3], document.getElementsByClassName('dish')[4], document.getElementsByClassName('price')[0], document.getElementsByClassName('price')[1], document.getElementsByClassName('price')[2], document.getElementsByClassName('price')[3], document.getElementsByClassName('price')[4]];
 
 const detectPlace = () => {
     window.addEventListener('click', (e) => {
-        if (e.target === document.getElementsByClassName('fa-times')[0]) {
-            hideModal();
-        }
-
-        let childrenNodes = [
-            document.getElementsByClassName('menu')[0],
-            document.getElementsByClassName('dish-category')[0],
-            document.getElementsByClassName('dish-list')[0],
-            document.getElementsByClassName('dish')[0],
-            document.getElementsByClassName('dish')[1],
-            document.getElementsByClassName('dish')[2],
-            document.getElementsByClassName('dish')[3],
-            document.getElementsByClassName('dish')[4],
-            document.getElementsByClassName('price')[0],
-            document.getElementsByClassName('price')[1],
-            document.getElementsByClassName('price')[2],
-            document.getElementsByClassName('price')[3],
-            document.getElementsByClassName('price')[4]
-        ];
-
         childrenNodes.some((node) => e.target === node) ? console.log('Clicked inside!') : console.log('Clicked outside!');
     });
 }
 
+const hideModal = () => {
+    document.getElementById('placeholder').style.display = 'none';
+    document.getElementById('container').style.filter = '';
+    document.getElementById('container').style.pointerEvents = 'auto';
+}
+
+const showModal = () => { 
+    document.getElementById('placeholder').style.display = 'block';
+    document.getElementById('container').style.filter = 'blur(8px)';
+    document.getElementById('container').style.pointerEvents = 'none';
+}
+
+const detectClick = () => {
+    window.addEventListener('click', (e) => {
+        if (e.target === document.getElementsByClassName('fa-times')[0]) {
+            hideModal();
+        }
+    });
+}
+
 const LandingPage = () => {
-    detectPlace();
+    detectClick();
 
     return (
         <article className="landing-page" onLoad={hideModal}>
