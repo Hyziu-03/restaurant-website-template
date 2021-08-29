@@ -51,7 +51,7 @@ $spacing: 8px
     border-radius: $spacing / 4
 
 @mixin center
-    min-width: 50vw
+    min-width: 60vw
     background: $white
     border: $spacing / 4 solid $blue
     position: fixed
@@ -61,6 +61,9 @@ $spacing: 8px
     padding: 4 * $spacing
     box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
     z-index: 20
+
+    @media(max-width: 1050px)
+        min-width: 80vw
 
 // ? Overall Selectors:
 
@@ -307,7 +310,13 @@ html
     font-size: 1.75 * $size
     user-select: none
     font-family: 'Dosis', 'Helvetica', sans-serif
+    transition: .25s all ease
 
+    &:hover
+        color: $green
+        filter: drop-shadow($spacing / 2 $spacing / 2 $spacing / 2 $hover-green)
+        cursor: pointer
+        
 .dish-list
     list-style-type: none
     @include body-text
@@ -373,6 +382,26 @@ html
 
     .copyright
         font-size: .9 * $size
+
+@media(max-width: 750px)
+    .dish-category
+        font-size: 1.25 * $size
+        padding-top: 2 * $spacing
+
+    .fa-times
+        top: 2 * $spacing
+        right: 3 * $spacing
+
+    .dish-list
+        margin-left: 0
+        text-align: center
+
+    .price 
+        position: static
+        margin-left: 2 * $spacing
+
+    #menu-arrow-right, #menu-arrow-left
+        top: 80%
 
 @media(max-width: 680px)
     .theme-toggler
