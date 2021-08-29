@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+let element;
+window.addEventListener('resize', () => window.innerWidth <= 750 ? element = <br/> : element = undefined);
+
 const Menu = () => {
     let [pageNumber, switchPage] = useState(1);
 
@@ -12,10 +15,10 @@ const Menu = () => {
         ],
 
         names: [
-            ['Sed fermentum vulputate', 'Sapien nec lobortis libero', 'Tristique in suspendisse', 'Pellentesque mattis elit', 'Vel interdum velit luctus vel'],
-            ['Nam nisi quam', 'Donec non viverra', 'Aliquam vitae scelerisque', 'Sed dignissim nisi', 'Morbi suscipit mattis'],
-            ['Curabitur ante mi', 'Nulla a felis est', 'Donec porta convallis ', 'Vestibulum viverra suscipit ', 'Nullam viverra faucibus'],
-            ['Vestibulum odio dolor', 'Mauris neque ligula', 'Praesent iaculis nunc', 'Cras sollicitudin est', 'Class aptent taciti ']
+            ['Sed fermentum', 'Sapien nec lobortis', 'Tristique in suspendisse', 'Pellentesque mattis elit', 'Vel interdum velit'],
+            ['Nam nisi quam', 'Donec non viverra', 'Morbi suscipit mattis', 'Sed dignissim nisi', 'Aliquam vitae'],
+            ['Curabitur ante mi', 'Nulla a felis', 'Donec porta convallis ', 'Vestibulum viverra ', 'Nullam viverra '],
+            ['Vestibulum odio', 'Mauris neque ligula', 'Praesent iaculis nunc', 'Cras sollicitudin est', 'Class aptent taciti ']
         ],
 
         prices: [
@@ -26,21 +29,19 @@ const Menu = () => {
         ]
     }
 
-    if(pageNumber === 4) {
-        pageNumber = 0;
-    }
-
+    let iterator = Math.abs(pageNumber % 4);
+    
     return (
         <section className="menu">
             <i className="fas fa-chevron-circle-left" id='menu-arrow-left' tabIndex="0" onClick={() => switchPage(pageNumber - 1)}></i>
-            <h1 className="dish-category">You are viewing {dish.categories[pageNumber]}</h1>
+            <h1 className="dish-category">You are viewing {dish.categories[iterator]}</h1>
             <i className="fas fa-times"></i>
             <ul className="dish-list">
-                <li className="dish">{dish.names[pageNumber][0]}<span className="price">{dish.prices[pageNumber][0]} PLN</span></li>
-                <li className="dish">{dish.names[pageNumber][1]}<span className="price">{dish.prices[pageNumber][1]} PLN</span></li>
-                <li className="dish">{dish.names[pageNumber][2]}<span className="price">{dish.prices[pageNumber][2]} PLN</span></li>
-                <li className="dish">{dish.names[pageNumber][3]}<span className="price">{dish.prices[pageNumber][3]} PLN</span></li>
-                <li className="dish">{dish.names[pageNumber][4]}<span className="price">{dish.prices[pageNumber][4]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][0]} {element} <span className="price">{dish.prices[iterator][0]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][1]} {element} <span className="price">{dish.prices[iterator][1]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][2]} {element} <span className="price">{dish.prices[iterator][2]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][3]} {element} <span className="price">{dish.prices[iterator][3]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][4]} {element} <span className="price">{dish.prices[iterator][4]} PLN</span></li>
             </ul>
             <i className="fas fa-chevron-circle-right" id='menu-arrow-right' tabIndex="0" onClick={() => switchPage(pageNumber + 1)}></i>
         </section>
