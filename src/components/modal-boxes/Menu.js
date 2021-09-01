@@ -1,11 +1,8 @@
 import { useState } from 'react';
 
-let element;
-window.addEventListener('resize', () => window.innerWidth <= 750 ? element = <br/> : element = undefined);
-
 const Menu = () => {
     let [pageNumber, switchPage] = useState(1);
-
+     
     let dish = {
         categories: [
             'proin blandit',
@@ -31,17 +28,19 @@ const Menu = () => {
 
     let iterator = Math.abs(pageNumber % 4);
     
+    let lineBreak = window.innerWidth <= 750 ? <br/> : undefined;
+
     return (
         <section className="menu">
             <i className="fas fa-chevron-circle-left" id='menu-arrow-left' tabIndex="0" onClick={() => switchPage(pageNumber - 1)}></i>
             <h1 className="dish-category">You are viewing {dish.categories[iterator]}</h1>
-            <i className="fas fa-times"></i>
+            <i className="fas fa-times" tabIndex='0'></i>
             <ul className="dish-list">
-                <li className="dish">{dish.names[iterator][0]} {element} <span className="price">{dish.prices[iterator][0]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][1]} {element} <span className="price">{dish.prices[iterator][1]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][2]} {element} <span className="price">{dish.prices[iterator][2]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][3]} {element} <span className="price">{dish.prices[iterator][3]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][4]} {element} <span className="price">{dish.prices[iterator][4]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][0]} {lineBreak} <span className="price">{dish.prices[iterator][0]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][1]} {lineBreak} <span className="price">{dish.prices[iterator][1]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][2]} {lineBreak} <span className="price">{dish.prices[iterator][2]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][3]} {lineBreak} <span className="price">{dish.prices[iterator][3]} PLN</span></li>
+                <li className="dish">{dish.names[iterator][4]} {lineBreak} <span className="price">{dish.prices[iterator][4]} PLN</span></li>
             </ul>
             <i className="fas fa-chevron-circle-right" id='menu-arrow-right' tabIndex="0" onClick={() => switchPage(pageNumber + 1)}></i>
         </section>
