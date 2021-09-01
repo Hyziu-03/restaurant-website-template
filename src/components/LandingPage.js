@@ -1,12 +1,6 @@
+import { Link } from 'react-router-dom';
+
 import Pizza from '../img/pizza.png'
-
-let childrenNodes = [document.getElementsByClassName('menu')[0], document.getElementsByClassName('dish-category')[0], document.getElementsByClassName('dish-list')[0], document.getElementsByClassName('dish')[0], document.getElementsByClassName('dish')[1], document.getElementsByClassName('dish')[2], document.getElementsByClassName('dish')[3], document.getElementsByClassName('dish')[4], document.getElementsByClassName('price')[0], document.getElementsByClassName('price')[1], document.getElementsByClassName('price')[2], document.getElementsByClassName('price')[3], document.getElementsByClassName('price')[4]];
-
-const detectPlace = () => {
-    window.addEventListener('click', (e) => {
-        childrenNodes.some((node) => e.target === node) ? console.log('Clicked inside!') : console.log('Clicked outside!');
-    });
-}
 
 const hideModal = () => {
     document.getElementById('placeholder').style.display = 'none';
@@ -45,11 +39,11 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" tabIndex="-1" onClick={showModal}>
-                            <span className="button-link" id='browse-our-menu'>Browse our menu</span>
+                        <button className="browse-our-menu focusable-button" tabIndex="0" onClick={showModal}>
+                            <Link to='/menu' className="button-link" id='browse-our-menu'>Browse our menu</Link>
                         </button>
 
-                    <button className="see-customer-reviews focusable-button" tabIndex="-1">
+                    <button className="see-customer-reviews focusable-button" tabIndex="0">
                         <a href="#customer-reviews" className="button-link">See customer reviews</a>
                     </button>
                 </section>
