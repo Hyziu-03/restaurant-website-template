@@ -45,13 +45,13 @@ $spacing: 8px
     background: $white
     color: $blue
     font-family: 'Raleway', 'Helvetica', sans-serif
-    font-size: .9 * $size
+    font-size: $size
+    line-height: 1.75 * $size
     margin: $spacing 0
     padding: $spacing / 2 $spacing
     border-radius: $spacing / 4
 
 @mixin center
-    min-width: 60vw
     background: $white
     border: $spacing / 4 solid $blue
     position: fixed
@@ -61,9 +61,6 @@ $spacing: 8px
     padding: 4 * $spacing
     box-shadow: 0 $spacing $spacing / 2 0 $hover-blue
     z-index: 20
-
-    @media(max-width: 1050px)
-        min-width: 80vw
 
 // ? Overall Selectors:
 
@@ -293,6 +290,10 @@ html
 
 .menu
     @include center
+    min-width: 60vw
+
+    @media(max-width: 1050px)
+        min-width: 80vw
 
 #menu-arrow-right, #menu-arrow-left
     top: 45%
@@ -328,6 +329,37 @@ html
 .price
     position: absolute
     right: 20%
+
+// ? Contact Form: 
+
+.contact-form
+    @include center
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+.input-fields
+    display: flex
+    flex-direction: column 
+    margin-right: 4 * $spacing
+
+.input
+    @include input
+    resize: none
+
+.textarea 
+    margin: 4 * $spacing 0
+    min-height: 10 * $size
+
+.roses-envelope
+    @include photo
+
+.send-feedback
+    padding: $spacing 0
+    min-width: 75%
+    margin: 0 auto
+    color: $blue
 
 // ? Responsiveness:
 
