@@ -3,7 +3,7 @@ import LandingPage  from './components/LandingPage';
 import CustomerReviews from './components/CustomerReviews';
 import Footer from './components/Footer';
 import Menu from './components/modal-boxes/Menu';
-
+import Contact from './components/modal-boxes/Contact';
 import { BrowserRouter as Router } from "react-router-dom";
 
 const loadStylesheet = () => {
@@ -47,7 +47,7 @@ function App() {
             </main>
             <Footer />
           </div>
-          <div id="placeholder"><Menu /></div>
+          <div id="placeholder"></div>
         </Router>
       </div>
   );
