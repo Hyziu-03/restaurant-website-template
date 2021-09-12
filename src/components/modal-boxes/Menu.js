@@ -1,8 +1,9 @@
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Menu = () => {
     let [pageNumber, switchPage] = useState(1);
-     
+    
     let dish = {
         categories: [
             'proin blandit',
@@ -31,19 +32,21 @@ const Menu = () => {
     let lineBreak = window.innerWidth <= 750 ? <br/> : undefined;
 
     return (
-        <section className="menu">
-            <i className="fas fa-chevron-circle-left" id='menu-arrow-left' tabIndex="0" onClick={() => switchPage(pageNumber - 1)}></i>
-            <h1 className="dish-category">You are viewing {dish.categories[iterator]}</h1>
-            <i className="fas fa-times" tabIndex='0'></i>
-            <ul className="dish-list">
-                <li className="dish">{dish.names[iterator][0]} {lineBreak} <span className="price">{dish.prices[iterator][0]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][1]} {lineBreak} <span className="price">{dish.prices[iterator][1]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][2]} {lineBreak} <span className="price">{dish.prices[iterator][2]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][3]} {lineBreak} <span className="price">{dish.prices[iterator][3]} PLN</span></li>
-                <li className="dish">{dish.names[iterator][4]} {lineBreak} <span className="price">{dish.prices[iterator][4]} PLN</span></li>
-            </ul>
-            <i className="fas fa-chevron-circle-right" id='menu-arrow-right' tabIndex="0" onClick={() => switchPage(pageNumber + 1)}></i>
-        </section>
+        <Router>
+            <section className="menu">
+                <i className="fas fa-chevron-circle-left" id='menu-arrow-left' tabIndex="0" onClick={() => switchPage(pageNumber - 1)}></i>
+                <h1 className="dish-category">You are viewing {dish.categories[iterator]}</h1>
+                <Link to="/home"><i className="fas fa-times" tabIndex='0'></i></Link>
+                <ul className="dish-list">
+                    <li className="dish">{dish.names[iterator][0]} {lineBreak} <span className="price">{dish.prices[iterator][0]} PLN</span></li>
+                    <li className="dish">{dish.names[iterator][1]} {lineBreak} <span className="price">{dish.prices[iterator][1]} PLN</span></li>
+                    <li className="dish">{dish.names[iterator][2]} {lineBreak} <span className="price">{dish.prices[iterator][2]} PLN</span></li>
+                    <li className="dish">{dish.names[iterator][3]} {lineBreak} <span className="price">{dish.prices[iterator][3]} PLN</span></li>
+                    <li className="dish">{dish.names[iterator][4]} {lineBreak} <span className="price">{dish.prices[iterator][4]} PLN</span></li>
+                </ul>
+                <i className="fas fa-chevron-circle-right" id='menu-arrow-right' tabIndex="0" onClick={() => switchPage(pageNumber + 1)}></i>
+            </section>
+        </Router>
     )
 }
 
