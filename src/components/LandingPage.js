@@ -1,17 +1,27 @@
+import ReactDOMServer from 'react-dom/server';
 import { Link } from 'react-router-dom';
 
+import Menu from '../components/modal-boxes/Menu';
 import Pizza from '../img/pizza.png'
 
 const hideModal = () => {
-    document.getElementById('placeholder').style.display = 'none';
-    document.getElementById('container').style.filter = '';
-    document.getElementById('container').style.pointerEvents = 'auto';
+    let placeholder = document.getElementById('placeholder');
+    placeholder.innerText = '';
+    placeholder.style.display = 'none';
+
+    let container = document.getElementById('container');
+    container.style.filter = '';
+    container.style.pointerEvents = 'auto';
 }
 
 const showModal = () => { 
-    document.getElementById('placeholder').style.display = 'block';
-    document.getElementById('container').style.filter = 'blur(8px)';
-    document.getElementById('container').style.pointerEvents = 'none';
+    let placeholder = document.getElementById('placeholder');
+    placeholder.innerText = ReactDOMServer.renderToString(<Menu />);
+    placeholder.style.display = 'block';
+    
+    let container = document.getElementById('container');
+    container.style.filter = 'blur(8px)';
+    container.style.pointerEvents = 'none';
 }
 
 const detectClick = () => {
@@ -39,11 +49,11 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" tabIndex="0" onClick={showModal}>
+                        <button className="browse-our-menu focusable-button" onClick={showModal}>
                             <Link to='/menu' className="button-link" id='browse-our-menu'>Browse our menu</Link>
                         </button>
 
-                    <button className="see-customer-reviews focusable-button" tabIndex="0">
+                    <button className="see-customer-reviews focusable-button">
                         <a href="#customer-reviews" className="button-link">See customer reviews</a>
                     </button>
                 </section>

@@ -1,15 +1,26 @@
+import ReactDOMServer from 'react-dom/server';
 import { Link } from "react-router-dom";
 
+import Contact from '../components/modal-boxes/Contact';
+
 const hideModal = () => {
-    document.getElementById('placeholder').style.display = 'none';
-    document.getElementById('container').style.filter = '';
-    document.getElementById('container').style.pointerEvents = 'auto';
+    let placeholder = document.getElementById('placeholder');
+    placeholder.innerText = '';
+    placeholder.style.display = 'none';
+
+    let container = document.getElementById('container');
+    container.style.filter = '';
+    container.style.pointerEvents = 'auto';
 }
 
 const showModal = () => {
-    document.getElementById('placeholder').style.display = 'block';
-    document.getElementById('container').style.filter = 'blur(8px)';
-    document.getElementById('container').style.pointerEvents = 'none';
+    let placeholder = document.getElementById('placeholder');
+    placeholder.innerText = ReactDOMServer.renderToString( <Contact /> );
+    placeholder.style.display = 'block';
+
+    let container = document.getElementById('container');
+    container.style.filter = 'blur(8px)';
+    container.style.pointerEvents = 'none';
 }
 
 const detectClick = () => {
@@ -25,7 +36,7 @@ const Footer = () => {
     
     return (
         <footer className='footer' onLoad={hideModal}>
-            <Link to='/contact-us'><button className="contact-us" tabIndex="0" onClick={showModal}>Contact Us</button></Link>
+            <Link to='/contact-us'><button className="contact-us" onClick={showModal}>Contact Us</button></Link>
             <p className="copyright">
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href="https://www.linkedin.com/in/szymon-hyziak/" className='link' target="_blank" rel="noreferrer">here</a>. Thank you!
