@@ -50,13 +50,13 @@ const CustomerReviews = () => {
 
     return (
         <article className='customer-reviews' id="customer-reviews">
-            <i className="fas fa-chevron-circle-left" tabIndex="0" onClick={() => update(slideNumber)}></i>
+            <i className="fas fa-chevron-circle-left" onClick={() => update(slideNumber)}></i>
             {customers.photos[slideNumber]}
             <section className='feedback'>
                 <p className="customer-words" id="customer-words">{customers.reviews[slideNumber]}</p>
                 <span className="signature" id="signature">{customers.signatures[slideNumber]}</span>
             </section>
-            <i className="fas fa-chevron-circle-right" tabIndex="0" onClick={() => update(slideNumber + 1)}></i>
+            <i className="fas fa-chevron-circle-right" onClick={() => update(slideNumber + 1)}></i>
         </article>  
     )
 }

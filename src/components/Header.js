@@ -7,7 +7,7 @@ const refresh = () => window.location.reload(true);
 
 const Header = () => {
     return (
-        <header className='header' tabIndex="0">
+        <header className='header'>
             <Link to='/home' className="heading" onClick={refresh}><h1>Your Name</h1></Link>
             { /* <section className="buttons"> <button className="theme-toggler" tabIndex="0" onClick={changeTheme}> <i className="fas fa-sun"></i> </button> </section> */ }
         </header>

@@ -5,7 +5,7 @@ import Contact from '../components/modal-boxes/Contact';
 
 const hideModal = () => {
     let placeholder = document.getElementById('placeholder');
-    placeholder.innerText = '';
+    placeholder.innerHTML = '';
     placeholder.style.display = 'none';
 
     let container = document.getElementById('container');
@@ -15,7 +15,7 @@ const hideModal = () => {
 
 const showModal = () => {
     let placeholder = document.getElementById('placeholder');
-    placeholder.innerText = ReactDOMServer.renderToString( <Contact /> );
+    placeholder.innerHTML = ReactDOMServer.renderToString( <Contact /> );
     placeholder.style.display = 'block';
 
     let container = document.getElementById('container');
@@ -36,7 +36,7 @@ const Footer = () => {
     
     return (
         <footer className='footer' onLoad={hideModal}>
-            <Link to='/contact-us'><button className="contact-us" onClick={showModal}>Contact Us</button></Link>
+            <Link to='/contact-us' tabIndex="-1"><button className="contact-us" onClick={showModal}>Contact Us</button></Link>
             <p className="copyright">
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href="https://www.linkedin.com/in/szymon-hyziak/" className='link' target="_blank" rel="noreferrer">here</a>. Thank you!

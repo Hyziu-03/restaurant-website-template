@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <Router>
             <section className="contact-form">
-                <Link to="/home"><i className="fas fa-times" tabIndex='0'></i></Link>
+                <Link to="/home"><i className="fas fa-times"></i></Link>
                 <section className="input-fields">
                     <label htmlFor="name" className="label">
                         Your name is: &emsp; <input type="text" className="input" name="name" placeholder="Yuval Noah"/>
