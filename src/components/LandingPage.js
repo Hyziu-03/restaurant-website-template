@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Menu from '../components/modal-boxes/Menu';
 import Pizza from '../img/pizza.png'
 
-const hideModal = () => {
+const hideModal = (e) => {
+    e.preventDefault();
+
     let placeholder = document.getElementById('placeholder');
     placeholder.innerText = '';
     placeholder.style.display = 'none';
@@ -16,7 +18,7 @@ const hideModal = () => {
 
 const showModal = () => { 
     let placeholder = document.getElementById('placeholder');
-    placeholder.innerText = ReactDOMServer.renderToString(<Menu />);
+    placeholder.innerHTML = ReactDOMServer.renderToString(<Menu />);
     placeholder.style.display = 'block';
     
     let container = document.getElementById('container');
@@ -27,9 +29,11 @@ const showModal = () => {
 const detectClick = () => {
     window.addEventListener('click', (e) => {
         if (e.target === document.getElementsByClassName('fa-times')[0]) {
-            hideModal();
+            hideModal(e);
         }
     });
+
+    
 }
 
 const LandingPage = () => {
@@ -49,12 +53,12 @@ const LandingPage = () => {
                     </p>
                 </section>
                 <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" onClick={showModal}>
-                            <Link to='/menu' className="button-link" id='browse-our-menu'>Browse our menu</Link>
+                        <button className="browse-our-menu focusable-button" onClick={showModal} tabIndex="0">
+                            <Link to='/menu' tabIndex="-1" className="button-link" id='browse-our-menu'>Browse our menu</Link>
                         </button>
 
-                    <button className="see-customer-reviews focusable-button">
-                        <a href="#customer-reviews" className="button-link">See customer reviews</a>
+                    <button className="see-customer-reviews focusable-button" tabIndex="0">
+                        <a href="#customer-reviews" tabIndex="-1" className="button-link">See customer reviews</a>
                     </button>
                 </section>
             </section>

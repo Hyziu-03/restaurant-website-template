@@ -42,18 +42,7 @@ function App() {
 
 export default App;
 
-// $ This web app has following bugs: 
-// $ Two modal boxes load with the page, that is they are visible for a short period of time before having styles applied,
-// $ Tabindexes don't work,
-// $ Events aren't getting binded on Menu and Contact components,
-// $ An OG image needs to be inserted.
-
-// $ There are also these: 
-// $ Page is getting refreshing when closing modal boxes.
-// $ Two modal boxes don't show up when the buttons are clicked.
-
-// $ I can solve them with the following updates:
+// $ I can solve the bugs with following updates:
 // $ Getting a loader,
-// $ Rewriting all tabindexes,
 // $ Prebinding given events,
 // $ Retaking the OG image.
