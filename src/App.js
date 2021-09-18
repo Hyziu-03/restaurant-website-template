@@ -27,6 +27,9 @@ function App() {
       <div className="wrapper">
         <Router>
           <div id="container">
+            <section id="loader">
+              <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </section>
             <Header />
             <main>
               <LandingPage />
