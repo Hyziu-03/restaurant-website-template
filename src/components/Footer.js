@@ -1,5 +1,5 @@
 import ReactDOMServer from 'react-dom/server';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 import Contact from '../components/modal-boxes/Contact';
 
@@ -36,11 +36,11 @@ const Footer = () => {
     
     return (
         <footer className='footer' onLoad={hideModal}>
-            <Link to='/contact-us' tabIndex="-1"><button className="contact-us" onClick={showModal}>Contact Us</button></Link>
-            <p className="copyright">
+            <Link to='/contact-us' tabIndex='-1'><button className='contact-us' onClick={showModal}>Contact Us</button></Link>
+            <p className='copyright'>
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
-                Find me on LinkedIn using the link <a href="https://www.linkedin.com/in/szymon-hyziak/" className='link' target="_blank" rel="noreferrer">here</a>. Thank you!
-                Icons made by <a href="https://www.freepik.com" target="_blank" rel="noreferrer" className="link">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="noreferrer" className="link">www.flaticon.com</a>.
+                Find me on LinkedIn using the link <a href='https://www.linkedin.com/in/szymon-hyziak/' className='link' target='_blank' rel='noreferrer'>here</a>. Thank you!
+                Icons made by <a href='https://www.freepik.com' target='_blank' rel='noreferrer' className='link'>Freepik</a> from <a href='https://www.flaticon.com/' target='_blank' rel='noreferrer' className='link'>www.flaticon.com</a>.
             </p>
         </footer>
     )

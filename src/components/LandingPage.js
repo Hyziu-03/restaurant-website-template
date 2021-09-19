@@ -40,11 +40,11 @@ const LandingPage = () => {
     detectClick();
 
     return (
-        <article className="landing-page" onLoad={hideModal}>
-            <section className="textual-section">
-                <section className="introduction">
-                    <h2 className="headline">Headline that captures attention!</h2>
-                    <p className="description">
+        <article className='landing-page' onLoad={hideModal}>
+            <section className='textual-section'>
+                <section className='introduction'>
+                    <h2 className='headline'>Headline that captures attention!</h2>
+                    <p className='description'>
                         Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Sed id sodales ligula. Cras
                         in elementum mauris, id suscipit libero.
@@ -52,17 +52,17 @@ const LandingPage = () => {
                         at id elit.
                     </p>
                 </section>
-                <section className="landing-page-buttons">
-                        <button className="browse-our-menu focusable-button" onClick={showModal} tabIndex="0">
-                            <Link to='/menu' tabIndex="-1" className="button-link" id='browse-our-menu'>Browse our menu</Link>
+                <section className='landing-page-buttons'>
+                        <button className='browse-our-menu focusable-button' onClick={showModal} tabIndex='0'>
+                            <Link to='/menu' tabIndex='-1' className='button-link' id='browse-our-menu'>Browse our menu</Link>
                         </button>
 
-                    <button className="see-customer-reviews focusable-button" tabIndex="0">
-                        <a href="#customer-reviews" tabIndex="-1" className="button-link">See customer reviews</a>
+                    <button className='see-customer-reviews focusable-button' tabIndex='0'>
+                        <a href='#customer-reviews' tabIndex='-1' className='button-link'>See customer reviews</a>
                     </button>
                 </section>
             </section>
-            <img src={Pizza} alt="Round and yummy pizza with tomatoes, cheese, olives and basil." className="pizza" />
+            <img src={Pizza} alt='Round and yummy pizza with tomatoes, cheese, olives and basil.' className='pizza' />
         </article>
     )
 }
