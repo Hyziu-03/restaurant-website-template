@@ -19,16 +19,33 @@ const preloadImage = (url) => {
   }
 }
 
+const loadApp = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('The app has been loaded successfully');
+    }, 2500);
+  });
+}
+
+async function awaitContent() {
+  document.body.style.overflow = 'hidden';
+  const result = await loadApp();
+  console.log(result);
+  document.body.style.overflow = 'visible';
+}
+
 function App() {
   preloadImage('../src/img/kate-swift.jpg');
   preloadImage('../src/img/matt-smith.jpg');
+
+  awaitContent();
 
   return (
       <div className="wrapper">
         <Router>
           <div id="container">
-            <section id="loader">
-              <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <section id="loader" className="loader">
+                <div className="lds-default"> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div><div></div> </div>
             </section>
             <Header />
             <main>
