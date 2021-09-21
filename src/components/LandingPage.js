@@ -26,18 +26,40 @@ const showModal = () => {
     container.style.pointerEvents = 'none';
 }
 
+let childrenNodes = [
+    document.getElementsByClassName('menu')[0], 
+    document.getElementsByClassName('dish-category')[0], 
+    document.getElementsByClassName('dish-list')[0], 
+    document.getElementsByClassName('dish')[0], 
+    document.getElementsByClassName('dish')[1], 
+    document.getElementsByClassName('dish')[2], 
+    document.getElementsByClassName('dish')[3], 
+    document.getElementsByClassName('dish')[4], 
+    document.getElementsByClassName('price')[0], 
+    document.getElementsByClassName('price')[1], 
+    document.getElementsByClassName('price')[2], 
+    document.getElementsByClassName('price')[3], 
+    document.getElementsByClassName('price')[4]
+];
+
+const detectPlace = () => {
+    window.addEventListener('click', (e) => {
+        childrenNodes.some((node) => e.target === node) ? console.log('Clicked inside!') : console.log('Clicked outside!');
+        console.log(e.target);
+    });
+}
+
 const detectClick = () => {
     window.addEventListener('click', (e) => {
         if (e.target === document.getElementsByClassName('fa-times')[0]) {
             hideModal(e);
         }
     });
-
-    
 }
 
 const LandingPage = () => {
     detectClick();
+    detectPlace();
 
     return (
         <article className='landing-page' onLoad={hideModal}>
