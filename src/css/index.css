@@ -649,6 +649,30 @@ html {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .loader {
   background: #303030;
   height: 100vh;
@@ -667,6 +691,16 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-delay: .75s;
+  animation-delay: .75s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 .lds-default {

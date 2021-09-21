@@ -483,6 +483,14 @@ html
 
 // ? Loader:
 
+@keyframes fadeOut
+    from 
+        opacity: 1
+        visibility: visible
+    to 
+        opacity: 0
+        visibility: hidden
+
 .loader
     background: $black
     height: 100vh
@@ -495,6 +503,11 @@ html
     display: flex
     justify-content: center
     align-items: center
+    animation-name: fadeOut
+    animation-duration: .75s
+    animation-delay: .75s
+    animation-fill-mode: forwards
+    animation-iteration-count: 1
 
 .lds-default
   display: inline-block
