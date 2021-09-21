@@ -34,8 +34,8 @@ const Menu = () => {
     return (
         <Router>
             <section className='menu'>
-                <i className='fas fa-chevron-circle-left' id='menu-arrow-left' onClick={() => switchPage(pageNumber - 1)}></i>
-                <h1 className='dish-category'>You are viewing {dish.categories[iterator]}</h1>
+                <i className='fas fa-chevron-circle-left' id='menu-arrow-left' onClick={() => switchPage((prevState) => prevState - 1)}></i>
+                <h1 className='dish-category'>You are viewing {pageNumber} {dish.categories[iterator]}</h1>
                 <Link to='/home'><i className='fas fa-times'></i></Link>
                 <ul className='dish-list'>
                     <li className='dish'>{dish.names[iterator][0]} {lineBreak} <span className='price'>{dish.prices[iterator][0]} PLN</span></li>
@@ -44,7 +44,7 @@ const Menu = () => {
                     <li className='dish'>{dish.names[iterator][3]} {lineBreak} <span className='price'>{dish.prices[iterator][3]} PLN</span></li>
                     <li className='dish'>{dish.names[iterator][4]} {lineBreak} <span className='price'>{dish.prices[iterator][4]} PLN</span></li>
                 </ul>
-                <i className='fas fa-chevron-circle-right' id='menu-arrow-right' onClick={() => switchPage(pageNumber + 1)}></i>
+                <i className='fas fa-chevron-circle-right' id='menu-arrow-right' onClick={() => switchPage((prevState) => prevState + 1)}></i>
             </section>
         </Router>
     )

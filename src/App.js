@@ -20,7 +20,7 @@ const loadApp = () => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve('The app has been loaded successfully');
-    }, 2500);
+    }, 750);
   });
 }
 
@@ -60,6 +60,4 @@ function App() {
 export default App;
 
 // $ I can solve the bugs with following updates:
-// $ Getting a loader,
 // $ Prebinding given events,
-// $ Retaking the OG image.
