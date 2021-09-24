@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/restaurant-website-template/static/css/main.946b7913.chunk.css",
+    "main.js": "/restaurant-website-template/static/js/main.2972d2cb.chunk.js",
+    "main.js.map": "/restaurant-website-template/static/js/main.2972d2cb.chunk.js.map",
+    "runtime-main.js": "/restaurant-website-template/static/js/runtime-main.60edb34e.js",
+    "runtime-main.js.map": "/restaurant-website-template/static/js/runtime-main.60edb34e.js.map",
+    "static/js/2.a1169617.chunk.js": "/restaurant-website-template/static/js/2.a1169617.chunk.js",
+    "static/js/2.a1169617.chunk.js.map": "/restaurant-website-template/static/js/2.a1169617.chunk.js.map",
+    "static/js/3.7f7421ca.chunk.js": "/restaurant-website-template/static/js/3.7f7421ca.chunk.js",
+    "static/js/3.7f7421ca.chunk.js.map": "/restaurant-website-template/static/js/3.7f7421ca.chunk.js.map",
+    "index.html": "/restaurant-website-template/index.html",
+    "static/css/main.946b7913.chunk.css.map": "/restaurant-website-template/static/css/main.946b7913.chunk.css.map",
+    "static/js/2.a1169617.chunk.js.LICENSE.txt": "/restaurant-website-template/static/js/2.a1169617.chunk.js.LICENSE.txt",
+    "static/media/envelope.d3051aa7.jpg": "/restaurant-website-template/static/media/envelope.d3051aa7.jpg",
+    "static/media/john-doe.6fdb476b.jpg": "/restaurant-website-template/static/media/john-doe.6fdb476b.jpg",
+    "static/media/kate-swift.7bb56ef5.jpg": "/restaurant-website-template/static/media/kate-swift.7bb56ef5.jpg",
+    "static/media/matt-smith.dce0d970.jpg": "/restaurant-website-template/static/media/matt-smith.dce0d970.jpg",
+    "static/media/pizza.3ea749fc.png": "/restaurant-website-template/static/media/pizza.3ea749fc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60edb34e.js",
+    "static/js/2.a1169617.chunk.js",
+    "static/css/main.946b7913.chunk.css",
+    "static/js/main.2972d2cb.chunk.js"
+  ]
+}
