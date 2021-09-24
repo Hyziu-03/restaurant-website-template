@@ -1,7 +1,8 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router
+} from 'react-router-dom';
 import Header from './components/Header';
-import LandingPage  from './components/LandingPage';
+import LandingPage from './components/LandingPage';
 import CustomerReviews from './components/CustomerReviews';
 import Footer from './components/Footer';
 import Menu from './components/modal-boxes/Menu';
@@ -12,7 +13,7 @@ const preloadImage = (url) => {
     let image = new Image();
     image.src = url;
   } catch (exception) {
-    throw new Error (exception);
+    throw new Error(exception);
   }
 }
 
@@ -58,6 +59,3 @@ function App() {
 }
 
 export default App;
-
-// $ I can solve the bugs with following updates:
-// $ Prebinding given events,

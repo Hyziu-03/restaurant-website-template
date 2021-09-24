@@ -1,5 +1,10 @@
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Link
+} from 'react-router-dom';
+import {
+    useState
+} from 'react';
 
 const Menu = () => {
     let [pageNumber, switchPage] = useState(1);
@@ -34,7 +39,7 @@ const Menu = () => {
     return (
         <Router>
             <section className='menu'>
-                <i className='fas fa-chevron-circle-left' id='menu-arrow-left' onClick={() => switchPage((prevState) => prevState - 1)}></i>
+                <div><i className='fas fa-chevron-circle-left' id='menu-arrow-left' onClick={() => switchPage((prevState) => prevState - 1)}></i></div>
                 <h1 className='dish-category'>You are viewing {pageNumber} {dish.categories[iterator]}</h1>
                 <Link to='/home'><i className='fas fa-times'></i></Link>
                 <ul className='dish-list'>

@@ -1,5 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
-import { Link } from 'react-router-dom';
+import {
+    Link
+} from 'react-router-dom';
 
 import Contact from '../components/modal-boxes/Contact';
 

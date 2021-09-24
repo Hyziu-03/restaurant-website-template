@@ -1,15 +1,16 @@
-import ReactDOMServer from 'react-dom/server';
-import { Link } from 'react-router-dom';
-
+import ReactDOM from 'react-dom';
+import {
+    Link
+} from 'react-router-dom';
 import Menu from '../components/modal-boxes/Menu';
 import Pizza from '../img/pizza.png'
 
 const hideModal = (e) => {
     e.preventDefault();
 
-    let placeholder = document.getElementById('placeholder');
-    placeholder.innerText = '';
+    let placeholder = document.getElementById('placeholder');           
     placeholder.style.display = 'none';
+    ReactDOM.unmountComponentAtNode(document.getElementById('placeholder'));
 
     let container = document.getElementById('container');
     container.style.filter = '';
@@ -18,7 +19,7 @@ const hideModal = (e) => {
 
 const showModal = () => { 
     let placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = ReactDOMServer.renderToString(<Menu />);
+    ReactDOM.render(<Menu />, placeholder);
     placeholder.style.display = 'block';
     
     let container = document.getElementById('container');
