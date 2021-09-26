@@ -1,9 +1,6 @@
 import ReactDOM from 'react-dom';
-import {
-    Link
-} from 'react-router-dom';
 import Menu from '../components/modal-boxes/Menu';
-import Pizza from '../img/pizza.png'
+import Pizza from '../img/pizza.png';
 
 const hideModal = (e) => {
     e.preventDefault();
@@ -53,7 +50,7 @@ const LandingPage = () => {
                 </section>
                 <section className='landing-page-buttons'>
                         <button className='browse-our-menu focusable-button' onClick={showModal} tabIndex='0'>
-                            <Link to='%PUBLIC_URL%/menu' tabIndex='-1' className='button-link' id='browse-our-menu'>Browse our menu</Link>
+                            <span tabIndex='0' className='button-link' id='browse-our-menu'>Browse our menu</span>
                         </button>
 
                     <button className='see-customer-reviews focusable-button' tabIndex='0'>

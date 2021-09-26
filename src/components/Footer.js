@@ -1,8 +1,4 @@
 import ReactDOMServer from 'react-dom/server';
-import {
-    Link
-} from 'react-router-dom';
-
 import Contact from '../components/modal-boxes/Contact';
 
 const hideModal = () => {
@@ -38,7 +34,7 @@ const Footer = () => {
     
     return (
         <footer className='footer' onLoad={hideModal}>
-            <Link to='%PUBLIC_URL%/contact-us' tabIndex='-1'><button className='contact-us' onClick={showModal}>Contact Us</button></Link>
+            <span tabIndex='0'><button className='contact-us' onClick={showModal}>Contact Us</button></span>
             <p className='copyright'>
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href='https://www.linkedin.com/in/szymon-hyziak/' className='link' target='_blank' rel='noreferrer'>here</a>. Thank you!

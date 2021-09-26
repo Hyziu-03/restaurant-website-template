@@ -1,6 +1,5 @@
 import {
     BrowserRouter as Router,
-    Link
 } from 'react-router-dom';
 import Envelope from '../../img/envelope.jpg';
 
@@ -11,7 +10,7 @@ const Contact = () => {
     return (
         <Router>
             <section className='contact-form'>
-                <Link to='%PUBLIC_URL%'><i className='fas fa-times'></i></Link>
+                <i className='fas fa-times'></i>
                 <section className='input-fields'>
                     <label htmlFor='name' className='label'>
                         Your name is: &emsp; <input type='text' className='input' name='name' placeholder='Yuval Noah'/>
