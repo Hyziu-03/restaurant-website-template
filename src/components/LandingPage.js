@@ -27,29 +27,6 @@ const showModal = () => {
     container.style.pointerEvents = 'none';
 }
 
-let childrenNodes = [
-    document.getElementsByClassName('menu')[0], 
-    document.getElementsByClassName('dish-category')[0], 
-    document.getElementsByClassName('dish-list')[0], 
-    document.getElementsByClassName('dish')[0], 
-    document.getElementsByClassName('dish')[1], 
-    document.getElementsByClassName('dish')[2], 
-    document.getElementsByClassName('dish')[3], 
-    document.getElementsByClassName('dish')[4], 
-    document.getElementsByClassName('price')[0], 
-    document.getElementsByClassName('price')[1], 
-    document.getElementsByClassName('price')[2], 
-    document.getElementsByClassName('price')[3], 
-    document.getElementsByClassName('price')[4]
-];
-
-const detectPlace = () => {
-    window.addEventListener('click', (e) => {
-        childrenNodes.some((node) => e.target === node) ? console.log('Clicked inside!') : console.log('Clicked outside!');
-        console.log(e.target);
-    });
-}
-
 const detectClick = () => {
     window.addEventListener('click', (e) => {
         if (e.target === document.getElementsByClassName('fa-times')[0]) {
@@ -60,7 +37,6 @@ const detectClick = () => {
 
 const LandingPage = () => {
     detectClick();
-    detectPlace();
 
     return (
         <article className='landing-page' onLoad={hideModal}>
@@ -77,7 +53,7 @@ const LandingPage = () => {
                 </section>
                 <section className='landing-page-buttons'>
                         <button className='browse-our-menu focusable-button' onClick={showModal} tabIndex='0'>
-                            <Link to='/menu' tabIndex='-1' className='button-link' id='browse-our-menu'>Browse our menu</Link>
+                            <Link to='%PUBLIC_URL%/menu' tabIndex='-1' className='button-link' id='browse-our-menu'>Browse our menu</Link>
                         </button>
 
                     <button className='see-customer-reviews focusable-button' tabIndex='0'>

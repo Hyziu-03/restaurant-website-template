@@ -40,8 +40,8 @@ const Menu = () => {
         <Router>
             <section className='menu'>
                 <div><i className='fas fa-chevron-circle-left' id='menu-arrow-left' onClick={() => switchPage((prevState) => prevState - 1)}></i></div>
-                <h1 className='dish-category'>You are viewing {pageNumber} {dish.categories[iterator]}</h1>
-                <Link to='/home'><i className='fas fa-times'></i></Link>
+                <h1 className='dish-category'>You are viewing {dish.categories[iterator]}</h1>
+                <Link to='%PUBLIC_URL%'><i className='fas fa-times'></i></Link>
                 <ul className='dish-list'>
                     <li className='dish'>{dish.names[iterator][0]} {lineBreak} <span className='price'>{dish.prices[iterator][0]} PLN</span></li>
                     <li className='dish'>{dish.names[iterator][1]} {lineBreak} <span className='price'>{dish.prices[iterator][1]} PLN</span></li>
