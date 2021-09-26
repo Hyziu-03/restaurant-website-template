@@ -1,6 +1,8 @@
 const refresh = () => {
-    window.location.reload(true);
-    window.location.hash = '#';
+    window.setTimeout(() => {
+        window.location.reload(true);
+    }, 500);
+    window.scrollTo(0, 0);
 }
 
 const Header = () => {

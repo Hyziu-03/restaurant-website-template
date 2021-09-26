@@ -26,6 +26,7 @@ const loadApp = () => {
 }
 
 async function awaitContent() {
+  window.location.hash = '';
   document.body.style.overflow = 'hidden';
   const result = await loadApp();
   console.log(result);
