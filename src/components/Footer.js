@@ -38,7 +38,7 @@ const Footer = () => {
     
     return (
         <footer className='footer' onLoad={hideModal}>
-            <Link to='/contact-us' tabIndex='-1'><button className='contact-us' onClick={showModal}>Contact Us</button></Link>
+            <Link to='%PUBLIC_URL%/contact-us' tabIndex='-1'><button className='contact-us' onClick={showModal}>Contact Us</button></Link>
             <p className='copyright'>
                 This website template has been designed and developed by <strong>Szymon Hyziak</strong>.
                 Find me on LinkedIn using the link <a href='https://www.linkedin.com/in/szymon-hyziak/' className='link' target='_blank' rel='noreferrer'>here</a>. Thank you!
