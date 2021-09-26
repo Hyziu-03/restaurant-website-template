@@ -1,5 +1,6 @@
 const refresh = () => {
     window.location.reload(true);
+    window.location.hash = '#';
 }
 
 const Header = () => {
