@@ -692,8 +692,8 @@ html {
   animation-name: fadeOut;
   -webkit-animation-duration: .75s;
   animation-duration: .75s;
-  -webkit-animation-delay: .75s;
-  animation-delay: .75s;
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;

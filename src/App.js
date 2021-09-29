@@ -21,7 +21,7 @@ const loadApp = () => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve('The app has been loaded successfully');
-    }, 750);
+    }, 1750);
   });
 }
 
